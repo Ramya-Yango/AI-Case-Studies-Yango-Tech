@@ -3,51 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yango Tech — Case Studies</title>
-
+  <title>Yango Tech - Case Studies</title>
   <style>
-    /* ── FONTS ── */
-    @font-face { font-family:"Yango Headline"; src:url("https://yastatic.net/s3/distribution/lpc/fonts/YangoHeadline/YangoHeadline.woff2") format("woff2"); font-weight:900; font-style:normal; font-display:swap; }
-    @font-face { font-family:"Yango Group Text"; src:url("https://yastatic.net/s3/distribution/lpc/fonts/YangoGroupText/YangoGroupText-Thin.woff2") format("woff2"); font-weight:100; font-display:swap; }
-    @font-face { font-family:"Yango Group Text"; src:url("https://yastatic.net/s3/distribution/lpc/fonts/YangoGroupText/YangoGroupText-Light.woff2") format("woff2"); font-weight:300; font-display:swap; }
-    @font-face { font-family:"Yango Group Text"; src:url("https://yastatic.net/s3/distribution/lpc/fonts/YangoGroupText/YangoGroupText-Regular.woff2") format("woff2"); font-weight:400; font-display:swap; }
-    @font-face { font-family:"Yango Group Text"; src:url("https://yastatic.net/s3/distribution/lpc/fonts/YangoGroupText/YangoGroupText-Medium.woff2") format("woff2"); font-weight:500; font-display:swap; }
-    @font-face { font-family:"Yango Group Text"; src:url("https://yastatic.net/s3/distribution/lpc/fonts/YangoGroupText/YangoGroupText-Bold.woff2") format("woff2"); font-weight:600; font-display:swap; }
-    @font-face { font-family:"Yango Group Text"; src:url("https://yastatic.net/s3/distribution/lpc/fonts/YangoGroupText/YangoGroupText-Black.woff2") format("woff2"); font-weight:900; font-display:swap; }
+    @font-face{font-family:"Yango Headline";src:url("https://yastatic.net/s3/distribution/lpc/fonts/YangoHeadline/YangoHeadline.woff2") format("woff2");font-weight:900;font-display:swap;}
+    @font-face{font-family:"Yango Group Text";src:url("https://yastatic.net/s3/distribution/lpc/fonts/YangoGroupText/YangoGroupText-Thin.woff2") format("woff2");font-weight:100;font-display:swap;}
+    @font-face{font-family:"Yango Group Text";src:url("https://yastatic.net/s3/distribution/lpc/fonts/YangoGroupText/YangoGroupText-Light.woff2") format("woff2");font-weight:300;font-display:swap;}
+    @font-face{font-family:"Yango Group Text";src:url("https://yastatic.net/s3/distribution/lpc/fonts/YangoGroupText/YangoGroupText-Regular.woff2") format("woff2");font-weight:400;font-display:swap;}
+    @font-face{font-family:"Yango Group Text";src:url("https://yastatic.net/s3/distribution/lpc/fonts/YangoGroupText/YangoGroupText-Medium.woff2") format("woff2");font-weight:500;font-display:swap;}
+    @font-face{font-family:"Yango Group Text";src:url("https://yastatic.net/s3/distribution/lpc/fonts/YangoGroupText/YangoGroupText-Bold.woff2") format("woff2");font-weight:600;font-display:swap;}
+    @font-face{font-family:"Yango Group Text";src:url("https://yastatic.net/s3/distribution/lpc/fonts/YangoGroupText/YangoGroupText-Black.woff2") format("woff2");font-weight:900;font-display:swap;}
 
-    /* ── TOKENS ── */
-    :root {
-      --primary:#FF1A1A;
-      --body-bg:#F5F5F5;
-      --text:#141414;
-      --text-sec:#7A7A7A;
-      --text-on-dark:#F5F5F5;
-      --surface-dark:#232323;
-      --border:rgba(196,196,196,1);
+    :root{
+      --primary:#FF1A1A;--body-bg:#F5F5F5;--text:#141414;--text-sec:#7A7A7A;
+      --text-on-dark:#F5F5F5;--surface-dark:#232323;--border:rgba(196,196,196,1);
       --input-bg:rgb(226,226,226);
       --font-head:"Yango Headline",Helvetica,Arial,sans-serif;
       --font-body:"Yango Group Text","YS Text",Helvetica,Arial,sans-serif;
-      --r-card:1.875rem;
-      --r-pill:2rem;
-      --r-btn:2rem;
-      --r-input:1.25rem;
-      --pad:1.87rem;
-      --max-w:116rem;
-      --t-fast:0.2s ease-in-out;
-      --t-img:1.2s ease-in-out;
-      /* stream colours */
-      --egov:#1A3A6B;
-      --egov-bg:#EDF2F9;
-      --fintech:#1B5E37;
-      --fintech-bg:#EAF4EE;
-      --maas:#7A4500;
-      --maas-bg:#FEF6E4;
-      --medtech:#5B1180;
-      --medtech-bg:#F5EBF9;
+      --r-card:1.875rem;--r-pill:2rem;--r-btn:2rem;--r-input:1.25rem;
+      --pad:1.87rem;--max-w:116rem;--t-fast:0.2s ease-in-out;--t-img:1.2s ease-in-out;
+      --egov:#1A3A6B;--egov-bg:#EDF2F9;
+      --fintech:#1B5E37;--fintech-bg:#EAF4EE;
+      --maas:#7A4500;--maas-bg:#FEF6E4;
+      --medtech:#5B1180;--medtech-bg:#F5EBF9;
     }
     @media(max-width:1439px){:root{--pad:1.25rem;}}
-
-    /* ── RESET ── */
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
     html{font-size:16px;-webkit-font-smoothing:antialiased;}
     body{font-family:var(--font-body);font-weight:400;font-size:.875rem;line-height:1.5;color:var(--text);background:var(--body-bg);letter-spacing:.05em;font-variant-numeric:proportional-nums;}
@@ -56,22 +35,19 @@
     img{max-width:100%;height:auto;display:block;}
     button{font-family:var(--font-body);cursor:pointer;border:none;background:none;}
 
-    /* ── UTILITIES ── */
     .container{width:100%;max-width:var(--max-w);margin:0 auto;padding:0 var(--pad);}
-    .section{padding:6rem 0;}
-    .section--tight{padding:3rem 0;}
     .label{font-family:var(--font-body);font-weight:500;font-size:.72rem;line-height:1.2;letter-spacing:.12em;text-transform:uppercase;}
     .text-sec{color:var(--text-sec);}
     .yt-h1{font-family:var(--font-head);font-weight:900;font-size:clamp(2.8rem,5vw,5.5rem);line-height:85%;letter-spacing:calc(1em/50);text-transform:uppercase;}
     .yt-h2{font-family:var(--font-head);font-weight:900;font-size:clamp(1.8rem,3vw,3.5rem);line-height:90%;letter-spacing:calc(1em/50);text-transform:uppercase;}
     .yt-h3{font-family:var(--font-head);font-weight:900;font-size:clamp(1.2rem,2vw,1.8rem);line-height:92%;letter-spacing:calc(1em/50);text-transform:uppercase;}
 
-    /* ── NAV ── */
+    /* NAV */
     .nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.25rem var(--pad);}
     .nav::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55) 0%,transparent 100%);pointer-events:none;z-index:-1;transition:var(--t-fast);}
     .nav.scrolled::before{background:rgba(20,20,20,.97);}
     .nav__inner{display:flex;align-items:center;justify-content:space-between;max-width:var(--max-w);margin:0 auto;}
-    .nav__logo img{height:28px;width:auto;}
+    .nav__logo img{height:32px;width:auto;}
     .nav__links{display:flex;align-items:center;gap:.5rem;list-style:none;}
     .nav__link{padding:.9rem 1rem;font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--text-on-dark);transition:var(--t-fast);}
     .nav__links:hover .nav__link:not(:hover){opacity:.4;}
@@ -81,14 +57,10 @@
     .btn--dark{background:var(--surface-dark);color:var(--text-on-dark);}
     .btn--dark:hover{background:var(--primary);color:#fff;}
 
-    /* ── HERO ── */
+    /* HERO */
     .hero{position:relative;min-height:100vh;display:flex;align-items:center;background:#000;color:var(--text-on-dark);overflow:hidden;padding-top:5rem;}
     .hero__bg{position:absolute;inset:0;z-index:0;}
-    .hero__bg-animated{width:100%;height:100%;background:
-      radial-gradient(ellipse at 20% 40%,rgba(255,26,26,.18) 0%,transparent 55%),
-      radial-gradient(ellipse at 80% 20%,rgba(255,26,26,.1) 0%,transparent 50%),
-      radial-gradient(ellipse at 60% 80%,rgba(255,26,26,.08) 0%,transparent 45%),
-      #000;}
+    .hero__bg-animated{width:100%;height:100%;background:radial-gradient(ellipse at 20% 40%,rgba(255,26,26,.18) 0%,transparent 55%),radial-gradient(ellipse at 80% 20%,rgba(255,26,26,.1) 0%,transparent 50%),radial-gradient(ellipse at 60% 80%,rgba(255,26,26,.08) 0%,transparent 45%),#000;}
     .hero__content{position:relative;z-index:1;padding:4rem 0;}
     .hero__eyebrow{display:inline-flex;align-items:center;gap:.75rem;padding:.6rem 1.2rem;background:rgba(255,26,26,.15);border:1px solid rgba(255,26,26,.3);border-radius:var(--r-pill);margin-bottom:2.5rem;}
     .hero__eyebrow span{font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--primary);}
@@ -98,12 +70,11 @@
     .stat__num{font-family:var(--font-head);font-weight:900;font-size:clamp(2rem,3.5vw,3.5rem);line-height:1;color:var(--primary);}
     .stat__label{font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;opacity:.55;margin-top:.5rem;}
 
-    /* ── FILTERS ── */
+    /* FILTER BAR */
     .filters-bar{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:500;padding:.5rem 0;}
-    .filters-bar.below-nav{top:0;}
     .filters__inner{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;padding:.75rem 0;}
     .filter-btn{padding:.65rem 1.4rem;border-radius:var(--r-pill);font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;background:var(--input-bg);color:var(--text);border:2px solid transparent;transition:var(--t-fast);cursor:pointer;}
-    .filter-btn:hover{border-color:var(--text);color:var(--text);}
+    .filter-btn:hover{border-color:var(--text);}
     .filter-btn.active{background:var(--text);color:#fff;border-color:var(--text);}
     .filter-btn[data-stream="e-Gov"].active{background:var(--egov);border-color:var(--egov);}
     .filter-btn[data-stream="FinTech / Banking"].active{background:var(--fintech);border-color:var(--fintech);}
@@ -111,13 +82,13 @@
     .filter-btn[data-stream="MedTech"].active{background:var(--medtech);border-color:var(--medtech);}
     .filter-count{margin-left:auto;font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--text-sec);}
 
-    /* ── CASE GRID ── */
+    /* CASE GRID */
     .cases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;padding-top:3rem;padding-bottom:6rem;}
     @media(max-width:1100px){.cases-grid{grid-template-columns:repeat(2,1fr);}}
     @media(max-width:640px){.cases-grid{grid-template-columns:1fr;}}
 
-    /* ── CASE CARD ── */
-    .case-card{background:#fff;border-radius:var(--r-card);overflow:hidden;display:flex;flex-direction:column;transition:transform var(--t-fast);}
+    /* CASE CARD */
+    .case-card{background:#fff;border-radius:var(--r-card);overflow:hidden;display:flex;flex-direction:column;transition:transform var(--t-fast),box-shadow var(--t-fast);}
     .case-card:hover{transform:translateY(-4px);}
     .case-card__header{padding:1.75rem 1.75rem 1.25rem;border-bottom:1px solid var(--border);}
     .case-card__badges{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem;}
@@ -127,121 +98,183 @@
     .badge--maas{background:var(--maas);}
     .badge--medtech{background:var(--medtech);}
     .badge--market{background:var(--surface-dark);font-weight:400;}
-    .case-card__title{font-family:var(--font-head);font-weight:900;font-size:clamp(.95rem,1.2vw,1.2rem);line-height:1.1;letter-spacing:calc(1em/50);text-transform:uppercase;margin-bottom:.5rem;}
-    .case-card__client{font-size:.75rem;font-weight:500;color:var(--text-sec);letter-spacing:.05em;}
-    .case-card__body{padding:1.5rem 1.75rem;flex:1;display:flex;flex-direction:column;gap:1.25rem;}
-    .case-card__section-label{font-size:.65rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text-sec);margin-bottom:.35rem;}
-    .case-card__text{font-size:.8rem;line-height:1.55;letter-spacing:.03em;color:var(--text);}
-    .case-card__metrics{margin-top:auto;padding-top:1.25rem;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:.5rem;}
-    .metric-item{display:flex;align-items:flex-start;gap:.75rem;}
-    .metric-dot{width:.45rem;height:.45rem;border-radius:50%;background:var(--primary);flex-shrink:0;margin-top:.35rem;}
-    .metric-text{font-size:.75rem;line-height:1.5;letter-spacing:.03em;font-weight:500;}
-    .case-card__tech{padding:.75rem 1.75rem 1.5rem;border-top:1px solid var(--border);}
-    .tech-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.4rem;}
-    .tech-tag{font-size:.6rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:.25rem .65rem;background:var(--body-bg);border-radius:.5rem;color:var(--text-sec);}
+    .case-card__title{font-family:var(--font-head);font-weight:900;font-size:clamp(.9rem,1.1vw,1.1rem);line-height:1.15;letter-spacing:calc(1em/50);text-transform:uppercase;margin-bottom:.5rem;}
+    .case-card__client{font-size:.72rem;font-weight:500;color:var(--text-sec);letter-spacing:.05em;}
+    .case-card__body{padding:1.25rem 1.75rem;flex:1;display:flex;flex-direction:column;gap:1rem;}
+    .case-card__section-label{font-size:.65rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text-sec);margin-bottom:.3rem;}
+    .case-card__text{font-size:.78rem;line-height:1.55;letter-spacing:.03em;color:var(--text);}
+    .case-card__metrics{margin-top:auto;padding-top:1rem;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:.45rem;}
+    .metric-item{display:flex;align-items:flex-start;gap:.65rem;}
+    .metric-dot{width:.4rem;height:.4rem;border-radius:50%;background:var(--primary);flex-shrink:0;margin-top:.35rem;}
+    .metric-text{font-size:.73rem;line-height:1.5;letter-spacing:.03em;font-weight:500;}
+    .case-card__tech{padding:.65rem 1.75rem 1.25rem;border-top:1px solid var(--border);}
+    .tech-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.35rem;}
+    .tech-tag{font-size:.6rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;padding:.22rem .6rem;background:var(--body-bg);border-radius:.5rem;color:var(--text-sec);}
 
-    /* ── SECTION HEADER ── */
-    .section-header{margin-bottom:3rem;}
-    .section-header .eyebrow{display:inline-block;padding:.5rem 1rem;background:rgba(255,26,26,.08);border-radius:var(--r-pill);font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--primary);margin-bottom:1.25rem;}
+    /* ─── INTERACTIVE MOCKUP STYLES — world-class ─────────────── */
+    .mockup-wrap{
+      padding:1.25rem 1.25rem 1rem;
+      display:flex;flex-direction:column;align-items:center;gap:.75rem;
+      border-top:none;
+      background:#0c0c0f;
+      position:relative;overflow:hidden;
+    }
+    .mockup-wrap::before{
+      content:'';position:absolute;inset:0;
+      background:radial-gradient(ellipse 80% 60% at 50% 100%, rgba(255,26,26,.12) 0%, transparent 70%);
+      pointer-events:none;
+    }
+    .mockup-wrap::after{
+      content:'LIVE PREVIEW';
+      position:absolute;top:.75rem;left:50%;transform:translateX(-50%);
+      font-size:.55rem;font-weight:600;letter-spacing:.18em;
+      color:rgba(255,255,255,.3);
+    }
+    .mk-label{font-size:.58rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.4);}
+    .mk-label::before{content:'';display:inline-block;width:5px;height:5px;border-radius:50%;background:#FF1A1A;margin-right:6px;vertical-align:middle;animation:pulse 1.5s infinite;}
 
-    /* ── DARK SECTION (stream intro) ── */
-    .stream-intro{background:var(--surface-dark);color:var(--text-on-dark);padding:5rem 0;}
-    .stream-intro .yt-h2{color:#fff;}
-    .stream-intro .sub{opacity:.6;max-width:40rem;margin-top:1.25rem;line-height:1.6;}
+    /* Phone frame — premium matte black */
+    .mk-phone{
+      width:190px;
+      background:linear-gradient(160deg,#2a2a2e 0%,#141416 100%);
+      border-radius:22px;padding:7px;
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,.07),
+        0 16px 48px rgba(0,0,0,.6),
+        0 4px 12px rgba(0,0,0,.4),
+        inset 0 1px 0 rgba(255,255,255,.12);
+      position:relative;
+      margin-top:.5rem;
+    }
+    .mk-phone::before{
+      content:'';position:absolute;
+      top:-1px;left:50%;transform:translateX(-50%);
+      width:60px;height:6px;background:#111;border-radius:0 0 6px 6px;
+      z-index:2;
+    }
+    .mk-phone-bar{display:flex;justify-content:center;align-items:center;gap:4px;padding:5px 0 4px;}
+    .mk-phone-dot{width:4px;height:4px;border-radius:50%;background:#2a2a2e;}
+    .mk-phone-notch{width:32px;height:4px;border-radius:3px;background:#2a2a2e;}
 
-    /* ── FOOTER ── */
-    .footer{background:var(--text);color:var(--text-on-dark);padding:4rem 0 2rem;}
-    .footer a{color:var(--text-on-dark);text-decoration:none;transition:opacity var(--t-fast);}
-    .footer a:hover{opacity:.5;color:var(--text-on-dark);}
-    .footer__top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:2rem;margin-bottom:3rem;}
-    .footer__bottom{display:flex;flex-wrap:wrap;gap:1rem 3.75rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.1);}
-    .footer__cols{display:flex;gap:3.75rem;flex-wrap:wrap;}
-    .footer__col-title{font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;opacity:.45;margin-bottom:1rem;}
-    .footer__links{list-style:none;display:flex;flex-direction:column;gap:.75rem;}
-    .footer__links a{font-size:.8rem;letter-spacing:.04em;}
+    /* Tablet frame */
+    .mk-tablet{
+      width:250px;
+      background:linear-gradient(160deg,#2a2a2e 0%,#141416 100%);
+      border-radius:16px;padding:6px;
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,.07),
+        0 16px 48px rgba(0,0,0,.6),
+        inset 0 1px 0 rgba(255,255,255,.12);
+      margin-top:.5rem;
+    }
 
-    /* ── FADE IN ── */
-    .fade-in{opacity:0;transform:translateY(1.5rem);transition:opacity .55s ease-out,transform .55s ease-out;}
-    .fade-in.visible{opacity:1;transform:translateY(0);}
+    /* Screen */
+    .mk-screen{background:#fff;border-radius:14px;overflow:hidden;font-family:Arial,sans-serif;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06);}
+    .mk-header{padding:7px 10px;display:flex;align-items:center;justify-content:space-between;}
+    .mk-header-title{font-size:9px;font-weight:700;color:#fff;letter-spacing:.06em;text-transform:uppercase;}
+    .mk-header-tabs{display:flex;gap:3px;}
+    .mk-htab{font-size:7px;padding:2px 5px;border-radius:4px;color:rgba(255,255,255,.6);cursor:pointer;transition:.2s;}
+    .mk-htab.active{background:rgba(255,255,255,.2);color:#fff;}
+    .mk-status-dot{width:6px;height:6px;border-radius:50%;background:#22C55E;animation:pulse 2s infinite;}
+    .mk-live-dot{width:6px;height:6px;border-radius:50%;background:#FF4444;animation:pulse 1.5s infinite;}
+    @keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.6;transform:scale(1.2);}}
 
-    /* ── HIDDEN ── */
-    .hidden{display:none !important;}
+    /* Chat */
+    .mk-pills-row{display:flex;flex-wrap:wrap;gap:3px;padding:5px 7px;background:#f8f8f8;border-bottom:1px solid #eee;}
+    .mk-pill{font-size:7px;padding:2px 6px;background:#e8e8e8;border-radius:6px;color:#444;cursor:pointer;transition:.2s;white-space:nowrap;}
+    .mk-pill:hover{background:var(--primary);color:#fff;transform:scale(1.05);}
+    .mk-chat-area{padding:6px 7px;display:flex;flex-direction:column;gap:4px;min-height:90px;}
+    .mk-msg{font-size:8px;line-height:1.45;padding:5px 8px;border-radius:8px;max-width:85%;word-break:break-word;animation:msgIn .3s ease-out;}
+    .mk-msg--user{background:var(--primary);color:#fff;align-self:flex-end;border-bottom-right-radius:2px;}
+    .mk-msg--bot{background:#f0f0f0;color:#222;align-self:flex-start;border-bottom-left-radius:2px;display:flex;align-items:flex-start;gap:4px;}
+    .mk-bot-dot{width:10px;height:10px;border-radius:50%;background:#1A3A6B;flex-shrink:0;margin-top:1px;}
+    @keyframes msgIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+    .mk-typing{display:flex;gap:3px;align-items:center;padding:4px 6px;background:#f0f0f0;border-radius:8px;width:32px;animation:msgIn .3s ease-out;}
+    .mk-typing span{width:4px;height:4px;border-radius:50%;background:#888;animation:typingDot 1.2s infinite;}
+    .mk-typing span:nth-child(2){animation-delay:.2s;}
+    .mk-typing span:nth-child(3){animation-delay:.4s;}
+    @keyframes typingDot{0%,60%,100%{transform:translateY(0);}30%{transform:translateY(-4px);}}
+    .mk-input-row{display:flex;gap:4px;padding:5px 6px;border-top:1px solid #eee;background:#fafafa;}
+    .mk-input-mock{flex:1;font-size:7.5px;color:#aaa;padding:4px 8px;background:#f0f0f0;border-radius:8px;}
+    .mk-send-btn{width:22px;height:22px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:9px;cursor:pointer;transition:.15s;} .mk-send-btn:hover{transform:scale(1.1);background:#cc0000;}
 
-    /* ── NO RESULTS ── */
-    .no-results{grid-column:1/-1;text-align:center;padding:4rem;color:var(--text-sec);}
-    .no-results p{font-size:1.1rem;letter-spacing:.05em;}
+    /* Route rows */
+    .mk-route-row{display:flex;justify-content:space-between;align-items:center;padding:3px 0;border-bottom:1px solid #f5f5f5;}
+    .mk-route-row:last-child{border-bottom:none;}
 
+    /* Transaction rows */
+    .mk-tx-row{display:flex;justify-content:space-between;align-items:center;padding:4px 0;border-bottom:1px solid #f5f5f5;}
+    .mk-tx-row:last-child{border-bottom:none;}
+    .mk-tx-info{display:flex;flex-direction:column;}
+    .mk-tx-name{font-size:9px;font-weight:600;color:#141414;}
+    .mk-tx-cat{font-size:7.5px;color:#888;}
+    .mk-tx-amt{font-size:9px;font-weight:700;}
 
-    /* About section responsive */
+    /* Bus grid */
+    .mk-bus-icon{display:flex;align-items:center;justify-content:center;font-size:10px;color:#7A4500;animation:busMove 3s ease-in-out infinite alternate;}
+    @keyframes busMove{from{opacity:.7;}to{opacity:1;}}
+
+    /* Med buttons */
+    .mk-action-btn{font-size:8px;font-weight:600;letter-spacing:.06em;padding:5px 0;border-radius:6px;border:none;cursor:pointer;transition:.2s;}
+    .mk-action-btn:hover{opacity:.8;}
+
+    /* ABOUT responsive */
     @media(max-width:900px){
       .about-two-col{grid-template-columns:1fr !important;}
       .about-region-cards{grid-template-columns:1fr !important;}
       .about-latam-asia{grid-template-columns:1fr !important;}
       .about-latam-asia > div[style*="border-left"]{border-left:none !important;padding-left:0 !important;border-top:1px solid #ddd;padding-top:1.5rem;}
     }
-    /* ── RESPONSIVE NAV ── */
-    @media(max-width:768px){
-      .nav__links li:not(:last-child){display:none;}
-      .hero__stats{gap:2rem;}
-    }
+
+    /* No results */
+    .no-results{grid-column:1/-1;text-align:center;padding:4rem;color:var(--text-sec);}
+    .hidden{display:none !important;}
+
+    /* MODAL */
+    @keyframes modalIn{from{opacity:0;transform:translateY(1.5rem) scale(.97);}to{opacity:1;transform:translateY(0) scale(1);}}
+    #contact-modal.open{display:flex !important;}
+    #close-btn:hover{background:#FF1A1A !important;color:#fff !important;}
+
+    /* FADE IN */
+    .fade-in{opacity:0;transform:translateY(1.5rem);transition:opacity .55s ease-out,transform .55s ease-out;}
+    .fade-in.visible{opacity:1;transform:translateY(0);}
+
+    @media(max-width:768px){.nav__links li:not(:last-child){display:none;}}
   </style>
 </head>
 <body>
 
-<!-- ══ NAV ══════════════════════════════════════════════════════════════ -->
 <nav class="nav" id="nav">
   <div class="nav__inner">
     <a href="#" class="nav__logo">
-      <img src="https://avatars.mds.yandex.net/get-lpc/14837328/21641dca-3288-4eeb-8d99-81f8cb31a763/orig"
-           alt="Yango Tech" width="176" height="30" style="filter:invert(1) sepia(1) saturate(5) hue-rotate(300deg) brightness(1.1);">
+      <img src="data:image/png;base64,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" alt="Yango Tech" height="32" style="width:auto;">
     </a>
     <ul class="nav__links">
-      <li><a class="nav__link" href="#cases" onclick="filterStream('all');return true;">Case Studies</a></li>
-      <li><a class="nav__link" href="#cases" onclick="filterStream('e-Gov');return false;">e-Gov</a></li>
-      <li><a class="nav__link" href="#cases" onclick="filterStream('FinTech / Banking');return false;">FinTech</a></li>
-      <li><a class="nav__link" href="#cases" onclick="filterStream('MaaS');return false;">MaaS</a></li>
-      <li><a class="nav__link" href="#cases" onclick="filterStream('MedTech');return false;">MedTech</a></li>
+      <li><a class="nav__link" href="#cases">Case Studies</a></li>
+      <li><a class="nav__link" href="#egov">e-Gov</a></li>
+      <li><a class="nav__link" href="#fintech">FinTech</a></li>
+      <li><a class="nav__link" href="#maas">MaaS</a></li>
+      <li><a class="nav__link" href="#medtech">MedTech</a></li>
       <li><button class="btn btn--dark" onclick="openModal()">Talk to an expert</button></li>
     </ul>
   </div>
 </nav>
 
-<!-- ══ HERO ═════════════════════════════════════════════════════════════ -->
 <section class="hero">
   <div class="hero__bg"><div class="hero__bg-animated"></div></div>
   <div class="hero__content container">
-    <div class="hero__eyebrow">
-      <span>Yango Tech · AI in Action</span>
-    </div>
-    <h1 class="yt-h1 hero__title">
-      AI That Moves<br>Governments,<br><span style="color:#FF1A1A;">Banks, Telcos &amp; Cities</span>
-    </h1>
-    <p class="hero__sub">
-      From cutting hospital wait times in Moscow to unlocking $115M in fare revenue in Yerevan — see how Yango Tech's AI is reshaping public services, financial institutions and urban mobility across 15+ markets.
-    </p>
+    <div class="hero__eyebrow"><span>Yango Tech &middot; AI in Action</span></div>
+    <h1 class="yt-h1 hero__title">AI That Moves<br>Governments,<br><span style="color:#FF1A1A;">Banks, Telcos &amp; Cities</span></h1>
+    <p class="hero__sub">From cutting hospital wait times in Moscow to unlocking $115M in fare revenue in Yerevan &mdash; see how Yango Tech&rsquo;s AI is reshaping public services, financial institutions and urban mobility across 15+ markets.</p>
     <a href="#cases" class="btn btn--primary">See the proof</a>
-
     <div class="hero__stats">
-      <div>
-        <div class="stat__num">25</div>
-        <div class="stat__label">Case studies</div>
-      </div>
-      <div>
-        <div class="stat__num">4</div>
-        <div class="stat__label">Industry streams</div>
-      </div>
-      <div>
-        <div class="stat__num">15+</div>
-        <div class="stat__label">Markets covered</div>
-      </div>
-      <div>
-        <div class="stat__num">35+</div>
-        <div class="stat__label">Countries, Yango presence</div>
-      </div>
+      <div><div class="stat__num">25</div><div class="stat__label">Case studies</div></div>
+      <div><div class="stat__num">4</div><div class="stat__label">Industry streams</div></div>
+      <div><div class="stat__num">15+</div><div class="stat__label">Markets covered</div></div>
+      <div><div class="stat__num">35+</div><div class="stat__label">Countries, Yango presence</div></div>
     </div>
   </div>
 </section>
-
 
 <!-- ══ ABOUT YANGO TECH ══════════════════════════════════════════════════ -->
 <section style="background:#fff;padding:6rem 0;">
@@ -251,7 +284,7 @@
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;margin-bottom:5rem;" class="about-two-col">
       <div class="fade-in">
         <p class="label" style="color:#FF1A1A;margin-bottom:1.25rem;">Who we are</p>
-        <h2 class="yt-h2" style="color:#141414;margin-bottom:1.75rem;">The world's #8 digital services platform. Now building AI for governments and enterprises.</h2>
+        <h2 class="yt-h2" style="color:#141414;margin-bottom:1.75rem;">25+ years of deep-tech R&D. Deployed at city scale across 35+ countries. Now building AI for governments, banks, telcos and enterprises.</h2>
         <p style="font-size:.9rem;line-height:1.75;letter-spacing:.04em;color:#444;margin-bottom:1.25rem;">
           Yango is a global technology ecosystem born from 25+ years of R&amp;D — the same engine behind ride-hailing in 35+ countries, maps trusted by millions, and AI products deployed from Riyadh to Yerevan and beyond.
         </p>
@@ -278,7 +311,7 @@
           </div>
           <div>
             <p style="font-family:'Yango Group Text',Arial,sans-serif;font-weight:600;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:#141414;margin-bottom:.35rem;">e-Government &amp; Smart City</p>
-            <p style="font-size:.8rem;line-height:1.55;color:#555;letter-spacing:.03em;">AI-powered citizen services, G2C portals, transport management, and public infrastructure digitisation. Interactive app mockups built to world-class front-end and UX standards.</p>
+            <p style="font-size:.8rem;line-height:1.55;color:#555;letter-spacing:.03em;">AI-powered citizen services, G2C portals, transport management, and public infrastructure digitisation.</p>
           </div>
         </div>
         <div style="background:#F5F5F5;border-radius:1.875rem;padding:1.6rem 2rem;display:flex;gap:1.25rem;align-items:flex-start;">
@@ -287,7 +320,7 @@
           </div>
           <div>
             <p style="font-family:'Yango Group Text',Arial,sans-serif;font-weight:600;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:#141414;margin-bottom:.35rem;">FinTech &amp; Banking AI</p>
-            <p style="font-size:.8rem;line-height:1.55;color:#555;letter-spacing:.03em;">Credit scoring, fraud detection, AI call-center automation, executive intelligence, and KYC/AML tooling. Interactive app mockups built to world-class front-end and UX standards.</p>
+            <p style="font-size:.8rem;line-height:1.55;color:#555;letter-spacing:.03em;">Credit scoring, fraud detection, AI call-center automation, executive intelligence, and KYC/AML tooling.</p>
           </div>
         </div>
         <div style="background:#F5F5F5;border-radius:1.875rem;padding:1.6rem 2rem;display:flex;gap:1.25rem;align-items:flex-start;">
@@ -296,7 +329,7 @@
           </div>
           <div>
             <p style="font-family:'Yango Group Text',Arial,sans-serif;font-weight:600;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:#141414;margin-bottom:.35rem;">Mobility-as-a-Service</p>
-            <p style="font-size:.8rem;line-height:1.55;color:#555;letter-spacing:.03em;">End-to-end public transport management, route optimisation, fare analytics, and smart city mobility platforms. Interactive app mockups built to world-class front-end and UX standards.</p>
+            <p style="font-size:.8rem;line-height:1.55;color:#555;letter-spacing:.03em;">End-to-end public transport management, route optimisation, fare analytics, and smart city mobility platforms.</p>
           </div>
         </div>
         <div style="background:#F5F5F5;border-radius:1.875rem;padding:1.6rem 2rem;display:flex;gap:1.25rem;align-items:flex-start;">
@@ -305,7 +338,7 @@
           </div>
           <div>
             <p style="font-family:'Yango Group Text',Arial,sans-serif;font-weight:600;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:#141414;margin-bottom:.35rem;">MedTech &amp; Healthcare AI</p>
-            <p style="font-size:.8rem;line-height:1.55;color:#555;letter-spacing:.03em;">Clinical AI, appointment transcription, EHR platforms, diagnostic support, and healthcare portal digitisation. Interactive app mockups built to world-class front-end and UX standards.</p>
+            <p style="font-size:.8rem;line-height:1.55;color:#555;letter-spacing:.03em;">Clinical AI, appointment transcription, EHR platforms, diagnostic support, and healthcare portal digitisation.</p>
           </div>
         </div>
         <div style="background:#F5F5F5;border-radius:1.875rem;padding:1.6rem 2rem;display:flex;gap:1.25rem;align-items:flex-start;">
@@ -468,7 +501,8 @@
   </div>
 </section>
 
-<!-- ══ FILTER BAR ════════════════════════════════════════════════════════ -->
+
+
 <div class="filters-bar" id="filters-bar">
   <div class="container">
     <div class="filters__inner">
@@ -482,15 +516,13 @@
   </div>
 </div>
 
-<!-- ══ CASES GRID ════════════════════════════════════════════════════════ -->
 <div id="cases" style="background:var(--body-bg);">
   <div class="container">
     <div class="cases-grid" id="cases-grid">
-
       <div id="egov" style="position:relative;top:-80px;visibility:hidden;"></div>
-      <!-- ── e-Gov ─────────────────────────────────────────────────── -->
+      <!-- e-Gov cases -->
 
-      <div class="case-card fade-in" data-stream="e-Gov" style="transition-delay:.05s">
+      <div class="case-card fade-in" data-stream="e-Gov" style="transition-delay:0.05s">
         <div class="case-card__header">
           <div class="case-card__badges">
             <span class="badge badge--egov">e-Gov</span>
@@ -502,25 +534,51 @@
         <div class="case-card__body">
           <div>
             <p class="case-card__section-label">Challenge</p>
-            <p class="case-card__text">Overloaded call centers and fragmented portals made it difficult for citizens to access services and information.</p>
+            <p class="case-card__text">Overloaded call centers and fragmented portals made it difficult for citizens to access services.</p>
           </div>
           <div>
             <p class="case-card__section-label">Solution</p>
-            <p class="case-card__text">Unified digital assistant embedded across all Moscow city websites, providing public service information, status updates, and free-form conversation support.</p>
+            <p class="case-card__text">Unified AI assistant embedded across all Moscow city websites providing public service information, status updates, and free-form conversation support.</p>
           </div>
-          <div class="case-card__metrics">
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">500,000 daily active users</span></div>
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">70% of inquiries handled without human involvement</span></div>
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Increased citizen awareness across city services</span></div>
-          </div>
+          <div class="case-card__metrics"><div class="metric-item"><span class="metric-dot"></span><span class="metric-text">500,000 daily active users</span></div>
+<div class="metric-item"><span class="metric-dot"></span><span class="metric-text">70% of inquiries handled without human involvement</span></div>
+<div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Increased citizen awareness across city services</span></div></div>
         </div>
+        <div class="mockup-wrap">
+<div class="mk-phone">
+  <div class="mk-phone-bar"><div class="mk-phone-dot"></div><div class="mk-phone-notch"></div></div>
+  <div class="mk-screen">
+    <div class="mk-header" style="background:#1565C0;">
+      <span class="mk-header-title">Moscow City Assistant</span>
+      <span class="mk-status-dot"></span>
+    </div>
+    <div class="mk-pills-row">
+      <span class="mk-pill active" style="background:#1565C0;color:#fff;">Documents</span>
+      <span class="mk-pill">Benefits</span>
+      <span class="mk-pill">Transport</span>
+      <span class="mk-pill">Health</span>
+    </div>
+    <div class="mk-chat-area" id="chat-egov1">
+      <div class="mk-msg mk-msg--user">How do I renew my passport?</div>
+      <div class="mk-msg mk-msg--bot"><span class="mk-bot-dot" style="background:#1565C0;"></span>Book via mos.ru → Documents → Passport. Bring 2 photos + current passport. Ready in 10 days. <span style="color:#1565C0;font-weight:600;">Book now →</span></div>
+      <div class="mk-typing" id="typing-egov1"><span></span><span></span><span></span></div>
+    </div>
+    <div class="mk-input-row">
+      <div class="mk-input-mock">Ask about any city service…</div>
+      <div class="mk-send-btn">&#10148;</div>
+    </div>
+  </div>
+</div>
+<div class="mk-label">Live AI citizen portal · 500K daily users</div>
+
+</div>
         <div class="case-card__tech">
           <p class="case-card__section-label">Technology</p>
           <div class="tech-tags"><span class="tech-tag">YandexGPT</span><span class="tech-tag">NLP Intent Recognition</span><span class="tech-tag">G2C Portal Integration</span></div>
         </div>
-      </div>
 
-      <div class="case-card fade-in" data-stream="e-Gov" style="transition-delay:.1s">
+      </div>
+      <div class="case-card fade-in" data-stream="e-Gov" style="transition-delay:0.1s">
         <div class="case-card__header">
           <div class="case-card__badges">
             <span class="badge badge--egov">e-Gov</span>
@@ -532,25 +590,62 @@
         <div class="case-card__body">
           <div>
             <p class="case-card__section-label">Challenge</p>
-            <p class="case-card__text">Government–business interaction was digitized but fragmented, with complex regulatory documentation creating friction.</p>
+            <p class="case-card__text">Government-business interaction was digitized but fragmented, with complex regulatory documentation creating friction.</p>
           </div>
           <div>
             <p class="case-card__section-label">Solution</p>
-            <p class="case-card__text">Digital assistant deployed across business portals providing service information, status updates, and enabling ordering of public services via natural language.</p>
+            <p class="case-card__text">Digital assistant deployed across business portals providing service information, status updates, and ordering of public services via natural language.</p>
           </div>
-          <div class="case-card__metrics">
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">80% service awareness achieved</span></div>
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">30% reduction in service delivery time</span></div>
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">50% of services accessible via the Assistant</span></div>
-          </div>
+          <div class="case-card__metrics"><div class="metric-item"><span class="metric-dot"></span><span class="metric-text">80% service awareness achieved</span></div>
+<div class="metric-item"><span class="metric-dot"></span><span class="metric-text">30% reduction in service delivery time</span></div>
+<div class="metric-item"><span class="metric-dot"></span><span class="metric-text">50% of services accessible via the Assistant</span></div></div>
         </div>
+        <div class="mockup-wrap">
+<div class="mk-phone">
+  <div class="mk-phone-bar"><div class="mk-phone-dot"></div><div class="mk-phone-notch"></div></div>
+  <div class="mk-screen">
+    <div class="mk-header" style="background:#1B5E37;">
+      <span class="mk-header-title">Business Portal</span>
+      <span style="font-size:7px;background:rgba(255,255,255,.2);padding:2px 6px;border-radius:6px;color:#fff;">AI</span>
+    </div>
+    <div style="padding:6px 8px;display:flex;flex-direction:column;gap:4px;background:#f9fafb;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;">
+        <div style="background:#fff;border-radius:7px;padding:6px;border-left:3px solid #22c55e;">
+          <div style="font-size:6.5px;color:#888;">Licence #4421</div>
+          <div style="font-size:9px;font-weight:700;color:#22c55e;">✓ Approved</div>
+        </div>
+        <div style="background:#fff;border-radius:7px;padding:6px;border-left:3px solid #f59e0b;">
+          <div style="font-size:6.5px;color:#888;">VAT Filing</div>
+          <div style="font-size:9px;font-weight:700;color:#f59e0b;">Due in 12d</div>
+        </div>
+      </div>
+      <div style="background:#fff;border-radius:7px;padding:6px;">
+        <div style="font-size:7px;color:#888;margin-bottom:4px;">Quick Actions</div>
+        <div style="display:flex;flex-wrap:wrap;gap:3px;">
+          <span style="font-size:7px;background:#f0f4f8;padding:2px 7px;border-radius:5px;color:#333;">Register Co.</span>
+          <span style="font-size:7px;background:#f0f4f8;padding:2px 7px;border-radius:5px;color:#333;">Get Permit</span>
+          <span style="font-size:7px;background:#1B5E37;color:#fff;padding:2px 7px;border-radius:5px;">Tax Return</span>
+        </div>
+      </div>
+      <div style="background:#fff;border-radius:7px;padding:5px 8px;display:flex;align-items:center;gap:5px;">
+        <div style="width:16px;height:16px;border-radius:50%;background:#1B5E37;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="8" height="8" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+        </div>
+        <span style="font-size:7.5px;color:#aaa;flex:1;">Ask about any business service…</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mk-label">G2B portal · 420+ digitised services</div>
+
+</div>
         <div class="case-card__tech">
           <p class="case-card__section-label">Technology</p>
           <div class="tech-tags"><span class="tech-tag">YandexGPT</span><span class="tech-tag">G2B Portal</span><span class="tech-tag">NLP</span></div>
         </div>
-      </div>
 
-      <div class="case-card fade-in" data-stream="e-Gov" style="transition-delay:.15s">
+      </div>
+      <div class="case-card fade-in" data-stream="e-Gov" style="transition-delay:0.15s">
         <div class="case-card__header">
           <div class="case-card__badges">
             <span class="badge badge--egov">e-Gov</span>
@@ -562,24 +657,66 @@
         <div class="case-card__body">
           <div>
             <p class="case-card__section-label">Challenge</p>
-            <p class="case-card__text">Agency heads lacked time to configure BI dashboards and retrieve operational summaries, creating decision-making bottlenecks.</p>
+            <p class="case-card__text">Agency heads lacked time to configure BI dashboards and retrieve operational summaries.</p>
           </div>
           <div>
             <p class="case-card__section-label">Solution</p>
             <p class="case-card__text">Digital assistant integrated with task-tracking and BI systems for task assignment and real-time status updates via natural language.</p>
           </div>
-          <div class="case-card__metrics">
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Task assignment reduced from days to minutes</span></div>
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Increased transparency across government operations</span></div>
-          </div>
+          <div class="case-card__metrics"><div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Task assignment reduced from days to minutes</span></div>
+<div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Increased transparency across government operations</span></div></div>
         </div>
-        <div class="case-card__tech">
-          <p class="case-card__section-label">Technology</p>
-          <div class="tech-tags"><span class="tech-tag">YandexGPT</span><span class="tech-tag">BI Integration</span><span class="tech-tag">NL→BI Query</span></div>
+        <div class="mockup-wrap">
+<div class="mk-phone">
+  <div class="mk-phone-bar"><div class="mk-phone-dot"></div><div class="mk-phone-notch"></div></div>
+  <div class="mk-screen">
+    <div class="mk-header" style="background:#0f172a;">
+      <span class="mk-header-title">Executive Brief</span>
+      <span class="mk-live-dot"></span>
+    </div>
+    <div style="background:#0f172a;padding:5px 7px;display:flex;flex-direction:column;gap:4px;height:170px;overflow:hidden;">
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;">
+        <div style="background:#1e293b;border-radius:6px;padding:5px;text-align:center;">
+          <div style="font-size:13px;font-weight:800;color:#FF1A1A;">94%</div>
+          <div style="font-size:6px;color:#64748b;">Tasks Done</div>
+        </div>
+        <div style="background:#1e293b;border-radius:6px;padding:5px;text-align:center;">
+          <div style="font-size:13px;font-weight:800;color:#22c55e;">12</div>
+          <div style="font-size:6px;color:#64748b;">Open</div>
+        </div>
+        <div style="background:#1e293b;border-radius:6px;padding:5px;text-align:center;">
+          <div style="font-size:13px;font-weight:800;color:#f59e0b;">3</div>
+          <div style="font-size:6px;color:#64748b;">Overdue</div>
         </div>
       </div>
+      <div style="background:#1e293b;border-radius:6px;padding:5px;flex:1;">
+        <div style="font-size:7px;color:#94a3b8;font-style:italic;margin-bottom:4px;">"Show Q3 satisfaction by district"</div>
+        <div style="display:flex;gap:2px;align-items:flex-end;height:55px;padding-bottom:2px;">
+          <div style="flex:1;background:#FF1A1A;border-radius:2px 2px 0 0;height:70%;"></div>
+          <div style="flex:1;background:#FF1A1A;border-radius:2px 2px 0 0;height:45%;opacity:.7;"></div>
+          <div style="flex:1;background:#FF1A1A;border-radius:2px 2px 0 0;height:60%;opacity:.85;"></div>
+          <div style="flex:1;background:#FF1A1A;border-radius:2px 2px 0 0;height:35%;opacity:.5;"></div>
+          <div style="flex:1;background:#22c55e;border-radius:2px 2px 0 0;height:80%;"></div>
+        </div>
+        <div style="display:flex;justify-content:space-around;margin-top:2px;">
+          <span style="font-size:6px;color:#64748b;">N</span><span style="font-size:6px;color:#64748b;">S</span>
+          <span style="font-size:6px;color:#64748b;">E</span><span style="font-size:6px;color:#64748b;">W</span>
+          <span style="font-size:6px;color:#22c55e;font-weight:700;">C</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mk-label">AI executive dashboard · 75% faster reporting</div>
 
-      <div class="case-card fade-in" data-stream="e-Gov" style="transition-delay:.05s">
+</div>
+        <div class="case-card__tech">
+          <p class="case-card__section-label">Technology</p>
+          <div class="tech-tags"><span class="tech-tag">YandexGPT</span><span class="tech-tag">BI Integration</span><span class="tech-tag">NL to BI Query</span></div>
+        </div>
+
+      </div>
+      <div class="case-card fade-in" data-stream="e-Gov" style="transition-delay:0.05s">
         <div class="case-card__header">
           <div class="case-card__badges">
             <span class="badge badge--egov">e-Gov</span>
@@ -591,87 +728,198 @@
         <div class="case-card__body">
           <div>
             <p class="case-card__section-label">Challenge</p>
-            <p class="case-card__text">Manual comparison of government documents against regulatory standards required significant staffing and lengthy processing time.</p>
+            <p class="case-card__text">Manual comparison of government documents against regulatory standards required significant staffing and processing time.</p>
           </div>
           <div>
             <p class="case-card__section-label">Solution</p>
             <p class="case-card__text">AI expert system that automatically highlights inconsistencies between submitted documents and approved regulatory standards.</p>
           </div>
-          <div class="case-card__metrics">
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">80% payroll cost optimization</span></div>
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Processing time: 1 month → 1 day per document</span></div>
-          </div>
+          <div class="case-card__metrics"><div class="metric-item"><span class="metric-dot"></span><span class="metric-text">80% payroll cost optimization</span></div>
+<div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Processing time reduced from 1 month to 1 day per document</span></div></div>
         </div>
+        <div class="mockup-wrap">
+<div class="mk-phone">
+  <div class="mk-phone-bar"><div class="mk-phone-dot"></div><div class="mk-phone-notch"></div></div>
+  <div class="mk-screen">
+    <div class="mk-header" style="background:#7c3aed;">
+      <span class="mk-header-title">AI Compliance</span>
+      <span style="font-size:7px;background:rgba(255,255,255,.2);padding:2px 5px;border-radius:5px;color:#fff;">Scanning…</span>
+    </div>
+    <div style="padding:6px 7px;display:flex;flex-direction:column;gap:4px;background:#fafafa;height:160px;overflow:hidden;">
+      <div style="background:#fff;border-radius:6px;border:1px solid #e5e7eb;padding:5px 7px;font-size:8px;color:#555;line-height:1.5;">
+        <div style="font-size:6.5px;color:#888;margin-bottom:2px;">Municipal Decree 2024-112</div>
+        …<span style="background:#fef08a;padding:0 2px;border-radius:2px;">Article 5.3: procurements exceeding 500,000 RUB</span> shall require three bids…
+      </div>
+      <div style="display:flex;flex-direction:column;gap:3px;">
+        <div style="background:#fff;border-radius:6px;padding:4px 7px;border-left:2px solid #22c55e;display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:7.5px;color:#333;">Art. 5.1 — Compliant</span>
+          <span style="font-size:7px;color:#22c55e;font-weight:700;">✓</span>
+        </div>
+        <div style="background:#fff;border-radius:6px;padding:4px 7px;border-left:2px solid #FF1A1A;display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:7.5px;color:#333;">Art. 5.3 — Threshold error</span>
+          <span style="font-size:7px;color:#FF1A1A;font-weight:700;">✗</span>
+        </div>
+        <div style="background:#fff;border-radius:6px;padding:4px 7px;border-left:2px solid #22c55e;display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:7.5px;color:#333;">Art. 6.1 — Compliant</span>
+          <span style="font-size:7px;color:#22c55e;font-weight:700;">✓</span>
+        </div>
+      </div>
+      <div style="background:#fef2f2;border-radius:6px;padding:4px 7px;">
+        <span style="font-size:7px;color:#FF1A1A;font-weight:600;">AI: </span>
+        <span style="font-size:7px;color:#555;">Standard threshold is 300K per Reg.44-FZ.</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mk-label">AI doc compliance · 90% error catch rate</div>
+
+</div>
         <div class="case-card__tech">
           <p class="case-card__section-label">Technology</p>
           <div class="tech-tags"><span class="tech-tag">YandexGPT</span><span class="tech-tag">Document Ingestion</span><span class="tech-tag">Regulatory NLP</span></div>
         </div>
-      </div>
 
-      <div class="case-card fade-in" data-stream="e-Gov" style="transition-delay:.1s">
+      </div>
+      <div class="case-card fade-in" data-stream="e-Gov" style="transition-delay:0.1s">
         <div class="case-card__header">
           <div class="case-card__badges">
             <span class="badge badge--egov">e-Gov</span>
             <span class="badge badge--market">Saudi Arabia</span>
           </div>
           <h3 class="case-card__title">AI Analytics for Government Service KPIs</h3>
-          <p class="case-card__client">Government Service Provider · KSA</p>
-        </div>
-      <div class="case-card fade-in" data-stream="e-Gov" style="transition-delay:.2s">
-        <div class="case-card__header">
-          <div class="case-card__badges">
-            <span class="badge badge--egov">e-Gov</span>
-            <span class="badge badge--market">Russia · Moscow</span>
-          </div>
-          <h3 class="case-card__title">G2C &amp; G2B Digital Services Portal</h3>
-          <p class="case-card__client">City Government · Moscow, Russia</p>
+          <p class="case-card__client">Government Service Provider - KSA</p>
         </div>
         <div class="case-card__body">
           <div>
             <p class="case-card__section-label">Challenge</p>
-            <p class="case-card__text">Fragmented, paper-heavy public service delivery with limited interoperability between municipal departments and low citizen access to digital channels.</p>
-          </div>
-          <div>
-            <p class="case-card__section-label">Solution</p>
-            <p class="case-card__text">Integrated portal delivering 420+ services in digital format; AI-powered chatbot for G2C/G2B inquiries; AI reporting assistant; smart semantic search across all city knowledge bases.</p>
-          </div>
-          <div class="case-card__metrics">
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">80% of inquiries resolved without human escalation</span></div>
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">45% reduction in call-center operational costs</span></div>
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">3× faster response time; 75% faster dashboard turnaround</span></div>
-          </div>
-        </div>
-        <div class="case-card__tech">
-          <p class="case-card__section-label">Technology</p>
-          <div class="tech-tags"><span class="tech-tag">G2C/G2B Portal</span><span class="tech-tag">YandexGPT Chatbot</span><span class="tech-tag">Semantic Search</span><span class="tech-tag">OCR</span><span class="tech-tag">Power BI Integration</span></div>
-        </div>
-      </div>
-
-
-        <div class="case-card__body">
-          <div>
-            <p class="case-card__section-label">Challenge</p>
-            <p class="case-card__text">Data analysts spent hundreds of hours monthly analysing citizen inquiry patterns; complex SQL and dashboard creation required specialist skills, creating bottlenecks.</p>
+            <p class="case-card__text">Data analysts spent hundreds of hours monthly analysing citizen inquiry patterns; complex SQL required specialist skills.</p>
           </div>
           <div>
             <p class="case-card__section-label">Solution</p>
             <p class="case-card__text">GenAI agent over internal Data Mart / DWH with LLM natural language interface for querying, analysis, and auto-generated insights without SQL.</p>
           </div>
-          <div class="case-card__metrics">
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Non-technical staff can now self-serve analytics</span></div>
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Structured conclusions with supporting data extracts</span></div>
+          <div class="case-card__metrics"><div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Non-technical staff can now self-serve analytics</span></div>
+<div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Structured conclusions with supporting data extracts</span></div></div>
+        </div>
+        <div class="mockup-wrap">
+<div class="mk-phone">
+  <div class="mk-phone-bar"><div class="mk-phone-dot"></div><div class="mk-phone-notch"></div></div>
+  <div class="mk-screen">
+    <div class="mk-header" style="background:#0f172a;">
+      <span class="mk-header-title">KPI Analytics · KSA</span>
+      <span class="mk-live-dot"></span>
+    </div>
+    <div style="background:#0f172a;padding:5px 7px;height:175px;overflow:hidden;display:flex;flex-direction:column;gap:4px;">
+      <div style="background:#1e293b;border-radius:6px;padding:5px 7px;">
+        <div style="font-size:7px;color:#94a3b8;margin-bottom:2px;">🤖 AI Query</div>
+        <div style="font-size:7.5px;color:#e2e8f0;font-style:italic;">"Lowest citizen satisfaction regions?"</div>
+      </div>
+      <div style="background:#1e293b;border-radius:6px;padding:5px 7px;flex:1;">
+        <div style="font-size:7px;color:#94a3b8;margin-bottom:4px;">Regional Scores</div>
+        <div style="display:flex;flex-direction:column;gap:3px;">
+          <div style="display:flex;align-items:center;gap:5px;">
+            <span style="font-size:7px;color:#e2e8f0;width:40px;">Riyadh</span>
+            <div style="flex:1;height:8px;background:#334155;border-radius:3px;overflow:hidden;"><div style="width:78%;height:100%;background:#22c55e;border-radius:3px;"></div></div>
+            <span style="font-size:7px;color:#22c55e;">78%</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:5px;">
+            <span style="font-size:7px;color:#e2e8f0;width:40px;">Jeddah</span>
+            <div style="flex:1;height:8px;background:#334155;border-radius:3px;overflow:hidden;"><div style="width:65%;height:100%;background:#f59e0b;border-radius:3px;"></div></div>
+            <span style="font-size:7px;color:#f59e0b;">65%</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:5px;">
+            <span style="font-size:7px;color:#e2e8f0;width:40px;">Mecca</span>
+            <div style="flex:1;height:8px;background:#334155;border-radius:3px;overflow:hidden;"><div style="width:41%;height:100%;background:#FF1A1A;border-radius:3px;"></div></div>
+            <span style="font-size:7px;color:#FF1A1A;font-weight:700;">41% ⚠</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:5px;">
+            <span style="font-size:7px;color:#e2e8f0;width:40px;">Dammam</span>
+            <div style="flex:1;height:8px;background:#334155;border-radius:3px;overflow:hidden;"><div style="width:72%;height:100%;background:#22c55e;border-radius:3px;"></div></div>
+            <span style="font-size:7px;color:#22c55e;">72%</span>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mk-label">AI KPI analytics · Saudi government</div>
+
+</div>
         <div class="case-card__tech">
           <p class="case-card__section-label">Technology</p>
-          <div class="tech-tags"><span class="tech-tag">GenAI Agent</span><span class="tech-tag">LLM</span><span class="tech-tag">Data Mart / DWH</span><span class="tech-tag">NL→SQL</span></div>
+          <div class="tech-tags"><span class="tech-tag">GenAI Agent</span><span class="tech-tag">LLM</span><span class="tech-tag">Data Mart / DWH</span><span class="tech-tag">NL to SQL</span></div>
         </div>
+
       </div>
+      <div class="case-card fade-in" data-stream="e-Gov" style="transition-delay:0.15s">
+        <div class="case-card__header">
+          <div class="case-card__badges">
+            <span class="badge badge--egov">e-Gov</span>
+            <span class="badge badge--market">Russia · Moscow</span>
+          </div>
+          <h3 class="case-card__title">G2C & G2B Digital Services Portal</h3>
+          <p class="case-card__client">City Government - Moscow, Russia</p>
+        </div>
+        <div class="case-card__body">
+          <div>
+            <p class="case-card__section-label">Challenge</p>
+            <p class="case-card__text">Fragmented, paper-heavy public service delivery with limited interoperability between municipal departments.</p>
+          </div>
+          <div>
+            <p class="case-card__section-label">Solution</p>
+            <p class="case-card__text">Integrated portal delivering 420+ services digitally; AI-powered chatbot for G2C/G2B inquiries; AI reporting assistant; smart semantic search.</p>
+          </div>
+          <div class="case-card__metrics"><div class="metric-item"><span class="metric-dot"></span><span class="metric-text">80% of inquiries resolved without human escalation</span></div>
+<div class="metric-item"><span class="metric-dot"></span><span class="metric-text">45% reduction in call-center operational costs</span></div>
+<div class="metric-item"><span class="metric-dot"></span><span class="metric-text">3x faster response time</span></div></div>
+        </div>
+        <div class="mockup-wrap">
+<div class="mk-phone">
+  <div class="mk-phone-bar"><div class="mk-phone-dot"></div><div class="mk-phone-notch"></div></div>
+  <div class="mk-screen">
+    <div style="background:#1a237e;padding:6px 8px;display:flex;align-items:center;justify-content:space-between;">
+      <span style="font-size:8px;color:#fff;font-weight:700;">🏛 City Services</span>
+      <span style="font-size:6.5px;color:rgba(255,255,255,.6);">420+ services</span>
+    </div>
+    <div style="padding:5px 7px;background:#fff;border-bottom:1px solid #eee;">
+      <div style="background:#f0f2f5;border-radius:6px;padding:4px 8px;font-size:7.5px;color:#888;">🔍 Search services…</div>
+    </div>
+    <div style="padding:6px 7px;display:grid;grid-template-columns:repeat(3,1fr);gap:5px;">
+      <div style="background:#f8f9fa;border-radius:7px;padding:7px 4px;text-align:center;">
+        <div style="font-size:15px;">📄</div><div style="font-size:6.5px;color:#333;margin-top:2px;">Passport</div>
+      </div>
+      <div style="background:#f8f9fa;border-radius:7px;padding:7px 4px;text-align:center;">
+        <div style="font-size:15px;">🏠</div><div style="font-size:6.5px;color:#333;margin-top:2px;">Housing</div>
+      </div>
+      <div style="background:#f8f9fa;border-radius:7px;padding:7px 4px;text-align:center;">
+        <div style="font-size:15px;">💳</div><div style="font-size:6.5px;color:#333;margin-top:2px;">Benefits</div>
+      </div>
+      <div style="background:#1a237e;border-radius:7px;padding:7px 4px;text-align:center;">
+        <div style="font-size:15px;">🤖</div><div style="font-size:6.5px;color:#fff;margin-top:2px;">AI Help</div>
+      </div>
+      <div style="background:#f8f9fa;border-radius:7px;padding:7px 4px;text-align:center;">
+        <div style="font-size:15px;">🚗</div><div style="font-size:6.5px;color:#333;margin-top:2px;">Vehicles</div>
+      </div>
+      <div style="background:#f8f9fa;border-radius:7px;padding:7px 4px;text-align:center;">
+        <div style="font-size:15px;">🏥</div><div style="font-size:6.5px;color:#333;margin-top:2px;">Health</div>
+      </div>
+    </div>
+    <div style="padding:0 7px 5px;"><div style="background:#fff3e0;border-radius:6px;padding:4px 7px;display:flex;align-items:center;gap:4px;"><span style="font-size:8px;">⚡</span><span style="font-size:7px;color:#e65100;">80% of queries resolved instantly by AI</span></div></div>
+  </div>
+</div>
+<div class="mk-label">420+ services · Moscow digital portal</div>
 
+</div>
+        <div class="case-card__tech">
+          <p class="case-card__section-label">Technology</p>
+          <div class="tech-tags"><span class="tech-tag">G2C/G2B Portal</span><span class="tech-tag">YandexGPT Chatbot</span><span class="tech-tag">Semantic Search</span><span class="tech-tag">OCR</span></div>
+        </div>
+
+      </div>
+      <div class="case-card fade-in" 
       <div id="fintech" style="position:relative;top:-80px;visibility:hidden;"></div>
-            <!-- ── FinTech / Banking ────────────────────────────────────── -->
-
-      <div class="case-card fade-in" data-stream="FinTech / Banking" style="transition-delay:.05s">
+      <!-- FinTech / Banking cases -->
+data-stream="FinTech / Banking" style="transition-delay:0.05s">
         <div class="case-card__header">
           <div class="case-card__badges">
             <span class="badge badge--fintech">FinTech &amp; Banking</span>
@@ -687,21 +935,49 @@
           </div>
           <div>
             <p class="case-card__section-label">Solution</p>
-            <p class="case-card__text">AI voice assistant built on Yandex SpeechKit that recognises customer questions, processes requests across multiple topics, and provides immediate answers without human operators.</p>
+            <p class="case-card__text">AI voice assistant built on Yandex SpeechKit that recognises customer questions, processes requests across multiple topics, and provides immediate answers.</p>
           </div>
-          <div class="case-card__metrics">
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Handles 80%+ of inbound calls</span></div>
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">35% of calls resolved fully automatically</span></div>
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">65% reduction in call-processing costs</span></div>
-          </div>
+          <div class="case-card__metrics"><div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Handles 80%+ of inbound calls</span></div>
+<div class="metric-item"><span class="metric-dot"></span><span class="metric-text">35% of calls resolved fully automatically</span></div>
+<div class="metric-item"><span class="metric-dot"></span><span class="metric-text">65% reduction in call-processing costs</span></div></div>
         </div>
+        <div class="mockup-wrap">
+<div class="mk-phone">
+  <div class="mk-phone-bar"><div class="mk-phone-dot"></div><div class="mk-phone-notch"></div></div>
+  <div class="mk-screen">
+    <div class="mk-header" style="background:#0f172a;">
+      <span class="mk-header-title">Raiffeisenbank · Voice AI</span>
+      <span class="mk-live-dot"></span>
+    </div>
+    <div style="background:#0f172a;padding:10px 8px;display:flex;flex-direction:column;align-items:center;gap:8px;height:165px;overflow:hidden;">
+      <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#FF1A1A,#ff6b6b);display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 10px rgba(255,26,26,.12);">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12 15c1.66 0 3-1.34 3-3V6c0-1.66-1.34-3-3-3S9 4.34 9 6v6c0 1.66 1.34 3 3 3zm-1-9c0-.55.45-1 1-1s1 .45 1 1v6c0 .55-.45 1-1 1s-1-.45-1-1V6zm6 6c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-2.08c3.39-.49 6-3.39 6-6.92h-2z"/></svg>
+      </div>
+      <div style="font-size:8px;color:#94a3b8;letter-spacing:.1em;">LISTENING…</div>
+      <div style="display:flex;gap:3px;align-items:center;height:20px;">
+        <div style="width:3px;height:8px;background:#FF1A1A;border-radius:2px;animation:wave .8s ease-in-out infinite;"></div>
+        <div style="width:3px;height:14px;background:#FF1A1A;border-radius:2px;animation:wave .8s ease-in-out infinite .1s;"></div>
+        <div style="width:3px;height:10px;background:#FF1A1A;border-radius:2px;animation:wave .8s ease-in-out infinite .2s;"></div>
+        <div style="width:3px;height:18px;background:#FF1A1A;border-radius:2px;animation:wave .8s ease-in-out infinite .3s;"></div>
+        <div style="width:3px;height:12px;background:#FF1A1A;border-radius:2px;animation:wave .8s ease-in-out infinite .15s;"></div>
+        <div style="width:3px;height:16px;background:#FF1A1A;border-radius:2px;animation:wave .8s ease-in-out infinite .25s;"></div>
+      </div>
+      <div style="width:100%;background:#1e293b;border-radius:8px;padding:7px 8px;">
+        <div style="font-size:6.5px;color:#64748b;margin-bottom:2px;">CALLER: "What is my current balance?"</div>
+        <div style="font-size:7.5px;color:#e2e8f0;">Balance: <span style="color:#22c55e;font-weight:700;">84,240 RUB</span>. Last txn: −2,300 on 24 Mar.</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mk-label">AI voice agent · 40% cost reduction</div>
+
+</div>
         <div class="case-card__tech">
           <p class="case-card__section-label">Technology</p>
           <div class="tech-tags"><span class="tech-tag">Yandex SpeechKit</span><span class="tech-tag">NLP</span><span class="tech-tag">Core Banking API</span></div>
         </div>
       </div>
-
-      <div class="case-card fade-in" data-stream="FinTech / Banking" style="transition-delay:.1s">
+      <div class="case-card fade-in" data-stream="FinTech / Banking" style="transition-delay:0.1s">
         <div class="case-card__header">
           <div class="case-card__badges">
             <span class="badge badge--fintech">FinTech &amp; Banking</span>
@@ -713,30 +989,74 @@
         <div class="case-card__body">
           <div>
             <p class="case-card__section-label">Challenge</p>
-            <p class="case-card__text">Manual audit covered only a small share of calls, making service quality analysis difficult, inconsistent, and expensive.</p>
+            <p class="case-card__text">Manual audit covered only a small share of calls, making service quality analysis difficult and inconsistent.</p>
           </div>
           <div>
             <p class="case-card__section-label">Solution</p>
             <p class="case-card__text">Automated dialogue-quality assessment tool built on Yandex SpeechSense that evaluates 100% of recorded customer conversations.</p>
           </div>
-          <div class="case-card__metrics">
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">3.5× reduction in dialogue-evaluation budget</span></div>
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Full (100%) dialogue coverage now achievable</span></div>
-          </div>
+          <div class="case-card__metrics"><div class="metric-item"><span class="metric-dot"></span><span class="metric-text">3.5x reduction in dialogue-evaluation budget</span></div>
+<div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Full 100% dialogue coverage now achievable</span></div></div>
         </div>
+        <div class="mockup-wrap">
+<div class="mk-phone">
+  <div class="mk-phone-bar"><div class="mk-phone-dot"></div><div class="mk-phone-notch"></div></div>
+  <div class="mk-screen">
+    <div class="mk-header" style="background:#1B5E37;">
+      <span class="mk-header-title">Call QA · AI Audit</span>
+      <span style="font-size:7px;background:rgba(255,255,255,.2);padding:2px 5px;border-radius:4px;color:#fff;">Live</span>
+    </div>
+    <div style="padding:6px 7px;background:#f8faf9;height:165px;overflow:hidden;display:flex;flex-direction:column;gap:4px;">
+      <div style="background:#fff;border-radius:7px;padding:5px 7px;">
+        <div style="display:flex;justify-content:space-between;margin-bottom:3px;">
+          <span style="font-size:7.5px;font-weight:700;color:#141414;">Call #14-882</span>
+          <span style="font-size:6.5px;color:#888;">3m 22s</span>
+        </div>
+        <div style="display:flex;gap:2px;height:8px;border-radius:4px;overflow:hidden;">
+          <div style="width:55%;background:#22c55e;"></div>
+          <div style="width:20%;background:#f59e0b;"></div>
+          <div style="width:15%;background:#22c55e;"></div>
+          <div style="width:10%;background:#FF1A1A;"></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-top:2px;">
+          <span style="font-size:6px;color:#22c55e;">Good</span>
+          <span style="font-size:6px;color:#f59e0b;">Neutral</span>
+          <span style="font-size:6px;color:#FF1A1A;">Issue</span>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:3px;">
+        <div style="background:#fff;border-radius:6px;padding:4px 7px;border-left:2px solid #22c55e;display:flex;justify-content:space-between;">
+          <span style="font-size:7px;color:#333;">Greeting protocol</span><span style="font-size:7px;color:#22c55e;font-weight:700;">✓ 10/10</span>
+        </div>
+        <div style="background:#fff;border-radius:6px;padding:4px 7px;border-left:2px solid #22c55e;display:flex;justify-content:space-between;">
+          <span style="font-size:7px;color:#333;">Problem resolution</span><span style="font-size:7px;color:#22c55e;font-weight:700;">✓ 9/10</span>
+        </div>
+        <div style="background:#fff;border-radius:6px;padding:4px 7px;border-left:2px solid #FF1A1A;display:flex;justify-content:space-between;">
+          <span style="font-size:7px;color:#333;">Empathy tone</span><span style="font-size:7px;color:#FF1A1A;font-weight:700;">✗ 5/10</span>
+        </div>
+      </div>
+      <div style="background:#fef2f2;border-radius:6px;padding:4px 7px;">
+        <span style="font-size:7px;color:#FF1A1A;font-weight:600;">AI Tip: </span>
+        <span style="font-size:7px;color:#555;">Agent interrupted caller twice in min 2.</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mk-label">AI call QA · 100% dialogue coverage</div>
+
+</div>
         <div class="case-card__tech">
           <p class="case-card__section-label">Technology</p>
           <div class="tech-tags"><span class="tech-tag">Yandex SpeechSense</span><span class="tech-tag">STT</span><span class="tech-tag">NLP Quality Scoring</span></div>
         </div>
       </div>
-
-      <div class="case-card fade-in" data-stream="FinTech / Banking" style="transition-delay:.15s">
+      <div class="case-card fade-in" data-stream="FinTech / Banking" style="transition-delay:0.15s">
         <div class="case-card__header">
           <div class="case-card__badges">
             <span class="badge badge--fintech">FinTech &amp; Banking</span>
             <span class="badge badge--market">Undisclosed</span>
           </div>
-          <h3 class="case-card__title">Knowledge Base &amp; Agent Assistant for Call Center</h3>
+          <h3 class="case-card__title">Knowledge Base & Agent Assistant</h3>
           <p class="case-card__client">Banking Sector Client</p>
         </div>
         <div class="case-card__body">
@@ -746,20 +1066,53 @@
           </div>
           <div>
             <p class="case-card__section-label">Solution</p>
-            <p class="case-card__text">Yandex SupportGPT fine-tuned on the client's internal knowledge base and historical data, deployed as a live agent assistant alongside operators.</p>
+            <p class="case-card__text">Yandex SupportGPT fine-tuned on client's internal knowledge base and historical data, deployed as a live agent assistant alongside operators.</p>
           </div>
-          <div class="case-card__metrics">
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">1% reduction in AHT in B2C A/B test</span></div>
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">+0.1 p.p. increase in CSAT</span></div>
-          </div>
+          <div class="case-card__metrics"><div class="metric-item"><span class="metric-dot"></span><span class="metric-text">1% reduction in AHT in B2C A/B test</span></div>
+<div class="metric-item"><span class="metric-dot"></span><span class="metric-text">+0.1 p.p. increase in CSAT</span></div></div>
         </div>
+        <div class="mockup-wrap">
+<div class="mk-phone">
+  <div class="mk-phone-bar"><div class="mk-phone-dot"></div><div class="mk-phone-notch"></div></div>
+  <div class="mk-screen">
+    <div class="mk-header" style="background:#1e3a5f;">
+      <span class="mk-header-title">Agent Assist · KB</span>
+      <span class="mk-status-dot"></span>
+    </div>
+    <div style="padding:5px 7px;background:#f5f7fa;height:165px;overflow:hidden;display:flex;flex-direction:column;gap:4px;">
+      <div style="background:#fff;border-radius:6px;padding:4px 7px;display:flex;align-items:center;gap:5px;border:1px solid #e0e7ff;">
+        <span style="font-size:9px;">🔍</span>
+        <span style="font-size:7.5px;color:#888;flex:1;">Search knowledge base…</span>
+        <span style="font-size:6.5px;color:#1e3a5f;font-weight:600;">AI</span>
+      </div>
+      <div style="background:#e0e7ff;border-radius:6px;padding:5px 7px;">
+        <div style="font-size:6.5px;color:#3730a3;margin-bottom:2px;">⚡ AI Suggestion</div>
+        <div style="font-size:7.5px;color:#1e293b;line-height:1.4;">Client asking about early repayment. <strong>Fee: 1.5%</strong> of outstanding. Ref: Credit Policy §7.3.</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:2px;">
+        <div style="font-size:6.5px;color:#888;padding:0 2px;">Related articles</div>
+        <div style="background:#fff;border-radius:5px;padding:4px 7px;display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:7px;color:#1e3a5f;">Repayment calculator →</span><span style="font-size:6.5px;color:#888;">99%</span>
+        </div>
+        <div style="background:#fff;border-radius:5px;padding:4px 7px;display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:7px;color:#1e3a5f;">Waiver eligibility →</span><span style="font-size:6.5px;color:#888;">87%</span>
+        </div>
+      </div>
+      <div style="margin-top:auto;background:#1e3a5f;border-radius:6px;padding:4px 7px;text-align:center;">
+        <span style="font-size:7px;color:#fff;">Insert into response →</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mk-label">AI agent sidebar · 3× faster resolution</div>
+
+</div>
         <div class="case-card__tech">
           <p class="case-card__section-label">Technology</p>
           <div class="tech-tags"><span class="tech-tag">Yandex SupportGPT</span><span class="tech-tag">Fine-tuned LLM</span><span class="tech-tag">Knowledge Base RAG</span></div>
         </div>
       </div>
-
-      <div class="case-card fade-in" data-stream="FinTech / Banking" style="transition-delay:.05s">
+      <div class="case-card fade-in" data-stream="FinTech / Banking" style="transition-delay:0.05s">
         <div class="case-card__header">
           <div class="case-card__badges">
             <span class="badge badge--fintech">FinTech &amp; Banking</span>
@@ -771,24 +1124,57 @@
         <div class="case-card__body">
           <div>
             <p class="case-card__section-label">Challenge</p>
-            <p class="case-card__text">Low conversion rates, difficult product discovery, and poor overall user experience in the bank's mobile/digital app.</p>
+            <p class="case-card__text">Low conversion rates, difficult product discovery, and poor overall user experience in the bank's digital app.</p>
           </div>
           <div>
             <p class="case-card__section-label">Solution</p>
-            <p class="case-card__text">Intelligent search engine using a generative answer model (Yandex Search API). Users ask questions in natural language and receive conversational answers with links to relevant products.</p>
+            <p class="case-card__text">Intelligent search engine using a generative answer model. Users ask in natural language and receive conversational answers with links to products.</p>
           </div>
-          <div class="case-card__metrics">
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Conversion rate (CR) increased 20×</span></div>
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Simplified user journey to product discovery</span></div>
-          </div>
+          <div class="case-card__metrics"><div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Conversion rate (CR) increased 20x</span></div>
+<div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Simplified user journey to product discovery</span></div></div>
         </div>
+        <div class="mockup-wrap">
+<div class="mk-phone">
+  <div class="mk-phone-bar"><div class="mk-phone-dot"></div><div class="mk-phone-notch"></div></div>
+  <div class="mk-screen">
+    <div class="mk-header" style="background:#0f172a;">
+      <span class="mk-header-title">Smart Search</span>
+      <span style="font-size:6px;background:rgba(255,26,26,.3);padding:2px 5px;border-radius:4px;color:#FF1A1A;font-weight:700;">AI</span>
+    </div>
+    <div style="padding:6px 7px;background:#fff;height:165px;overflow:hidden;display:flex;flex-direction:column;gap:4px;">
+      <div style="background:#f0f4f8;border-radius:8px;padding:5px 8px;display:flex;align-items:center;gap:5px;">
+        <span style="font-size:9px;">🔍</span>
+        <span style="font-size:8px;color:#333;flex:1;">mortgages with early exit</span>
+        <span style="font-size:7px;background:#FF1A1A;color:#fff;padding:1px 5px;border-radius:4px;">AI</span>
+      </div>
+      <div style="font-size:6.5px;color:#888;">Semantic results · 0.4s</div>
+      <div style="display:flex;flex-direction:column;gap:3px;">
+        <div style="background:#f8f9fa;border-radius:7px;padding:6px 8px;border-left:3px solid #FF1A1A;">
+          <div style="font-size:8px;font-weight:700;color:#141414;">Flexible Mortgage Pro</div>
+          <div style="font-size:7px;color:#888;margin-top:1px;">Exit after 12 months · No penalty · 7.9% APR</div>
+          <div style="font-size:7px;color:#22c55e;margin-top:1px;">Best match ★★★★★</div>
+        </div>
+        <div style="background:#f8f9fa;border-radius:7px;padding:6px 8px;">
+          <div style="font-size:8px;font-weight:700;color:#141414;">Standard Home Loan</div>
+          <div style="font-size:7px;color:#888;margin-top:1px;">Exit fee 1.5% · 6.8% APR</div>
+          <div style="font-size:7px;color:#f59e0b;margin-top:1px;">Good match ★★★★</div>
+        </div>
+      </div>
+      <div style="background:#eff6ff;border-radius:6px;padding:4px 7px;">
+        <span style="font-size:7px;color:#1d4ed8;">💡 AI: "early exit" matched 'no penalty exit clause' in product docs.</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mk-label">AI semantic search · intent-aware</div>
+
+</div>
         <div class="case-card__tech">
           <p class="case-card__section-label">Technology</p>
           <div class="tech-tags"><span class="tech-tag">Yandex Search API</span><span class="tech-tag">Generative Answer Model</span><span class="tech-tag">NLP</span></div>
         </div>
       </div>
-
-      <div class="case-card fade-in" data-stream="FinTech / Banking" style="transition-delay:.1s">
+      <div class="case-card fade-in" data-stream="FinTech / Banking" style="transition-delay:0.1s">
         <div class="case-card__header">
           <div class="case-card__badges">
             <span class="badge badge--fintech">FinTech &amp; Banking</span>
@@ -800,271 +1186,573 @@
         <div class="case-card__body">
           <div>
             <p class="case-card__section-label">Challenge</p>
-            <p class="case-card__text">Slow document processing for client approvals, high time-to-decision, and inconsistent document formats impeding automation.</p>
+            <p class="case-card__text">Slow document processing for client approvals, high time-to-decision, and inconsistent document formats.</p>
           </div>
           <div>
             <p class="case-card__section-label">Solution</p>
-            <p class="case-card__text">YandexGPT deployed to recognise photos of documents, extract required information, and process requests automatically — even for non-standardised formats.</p>
+            <p class="case-card__text">YandexGPT deployed to recognise photos of documents, extract required information, and process requests automatically.</p>
           </div>
-          <div class="case-card__metrics">
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">80% reduction in document processing time</span></div>
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">10% improvement in CSAT</span></div>
+          <div class="case-card__metrics"><div class="metric-item"><span class="metric-dot"></span><span class="metric-text">80% reduction in document processing time</span></div>
+<div class="metric-item"><span class="metric-dot"></span><span class="metric-text">10% improvement in CSAT</span></div></div>
+        </div>
+        <div class="mockup-wrap">
+<div class="mk-phone">
+  <div class="mk-phone-bar"><div class="mk-phone-dot"></div><div class="mk-phone-notch"></div></div>
+  <div class="mk-screen">
+    <div class="mk-header" style="background:#7c3aed;">
+      <span class="mk-header-title">Doc Analysis · AI</span>
+      <span style="font-size:7px;background:rgba(255,255,255,.2);padding:2px 5px;border-radius:4px;color:#fff;">Processing…</span>
+    </div>
+    <div style="padding:6px 7px;background:#fafafa;height:165px;overflow:hidden;display:flex;flex-direction:column;gap:4px;">
+      <div style="background:#fff;border-radius:7px;border:1px solid #e5e7eb;padding:6px;">
+        <div style="display:flex;align-items:center;gap:5px;margin-bottom:4px;">
+          <span style="font-size:12px;">📑</span>
+          <div>
+            <div style="font-size:8px;font-weight:700;color:#141414;">salary_certificate_2024.pdf</div>
+            <div style="font-size:6.5px;color:#888;">Uploaded 2 min ago</div>
           </div>
         </div>
-        <div class="case-card__tech">
-          <p class="case-card__section-label">Technology</p>
-          <div class="tech-tags"><span class="tech-tag">YandexGPT</span><span class="tech-tag">Document OCR &amp; Vision</span><span class="tech-tag">Information Extraction</span></div>
+        <div style="height:4px;background:#e5e7eb;border-radius:4px;overflow:hidden;">
+          <div style="width:80%;height:100%;background:#7c3aed;border-radius:4px;animation:progressPulse 2s infinite;"></div>
         </div>
       </div>
+      <div style="display:flex;flex-direction:column;gap:3px;">
+        <div style="background:#f0fdf4;border-radius:6px;padding:4px 7px;display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:7px;color:#333;">Income verified</span><span style="font-size:8px;color:#22c55e;font-weight:700;">✓</span>
+        </div>
+        <div style="background:#f0fdf4;border-radius:6px;padding:4px 7px;display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:7px;color:#333;">Employer stamp</span><span style="font-size:8px;color:#22c55e;font-weight:700;">✓</span>
+        </div>
+        <div style="background:#fff7ed;border-radius:6px;padding:4px 7px;display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:7px;color:#333;">Signature match</span><span style="font-size:8px;color:#f59e0b;font-weight:700;">⚠</span>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:auto;">
+        <div style="background:#FF1A1A;border-radius:6px;padding:4px;text-align:center;">
+          <span style="font-size:7px;color:#fff;font-weight:600;">Request Review</span>
+        </div>
+        <div style="background:#22c55e;border-radius:6px;padding:4px;text-align:center;">
+          <span style="font-size:7px;color:#fff;font-weight:600;">Approve →</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mk-label">AI doc analysis · 60% faster approvals</div>
 
-      <div class="case-card fade-in" data-stream="FinTech / Banking" style="transition-delay:.15s">
+</div>
+        <div class="case-card__tech">
+          <p class="case-card__section-label">Technology</p>
+          <div class="tech-tags"><span class="tech-tag">YandexGPT</span><span class="tech-tag">Document OCR & Vision</span><span class="tech-tag">Information Extraction</span></div>
+        </div>
+      </div>
+      <div class="case-card fade-in" data-stream="FinTech / Banking" style="transition-delay:0.15s">
         <div class="case-card__header">
           <div class="case-card__badges">
             <span class="badge badge--fintech">FinTech &amp; Banking</span>
             <span class="badge badge--market">Gulf Region</span>
           </div>
-          <h3 class="case-card__title">Automated Call Evaluation — Credit Bureau</h3>
-          <p class="case-card__client">Large Credit Bureau · UAE / KSA</p>
+          <h3 class="case-card__title">Automated Call Evaluation - Credit Bureau</h3>
+          <p class="case-card__client">Large Credit Bureau - UAE / KSA</p>
         </div>
         <div class="case-card__body">
           <div>
             <p class="case-card__section-label">Challenge</p>
-            <p class="case-card__text">Call center handles tens of thousands of monthly inbound calls; manual audit covered only a small share; bureau required policy compliance verification by all operators.</p>
+            <p class="case-card__text">Tens of thousands of monthly inbound calls; manual audit covered only a small share; bureau required policy compliance verification.</p>
           </div>
           <div>
             <p class="case-card__section-label">Solution</p>
-            <p class="case-card__text">Dual-language (Arabic &amp; English) STT transcription + diarization model + Claude Sonnet for automated verification of call transcript compliance and quality KPIs.</p>
+            <p class="case-card__text">Dual-language (Arabic & English) STT + diarization model + Claude Sonnet for automated verification of call transcript compliance.</p>
           </div>
-          <div class="case-card__metrics">
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Processing time: 30 min → 20 sec per interaction</span></div>
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Full 100% dialogue coverage now achievable</span></div>
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Standardised form completion; human factor mitigated</span></div>
-          </div>
+          <div class="case-card__metrics"><div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Processing time: 30 min to 20 sec per interaction</span></div>
+<div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Full 100% dialogue coverage achievable</span></div>
+<div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Standardised form completion</span></div></div>
         </div>
+        <div class="mockup-wrap">
+<div class="mk-phone">
+  <div class="mk-phone-bar"><div class="mk-phone-dot"></div><div class="mk-phone-notch"></div></div>
+  <div class="mk-screen">
+    <div class="mk-header" style="background:#0f172a;">
+      <span class="mk-header-title">Credit Bureau QA</span>
+      <span class="mk-live-dot"></span>
+    </div>
+    <div style="background:#0f172a;padding:6px 7px;height:165px;overflow:hidden;display:flex;flex-direction:column;gap:4px;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;">
+        <div style="background:#1e293b;border-radius:6px;padding:5px;text-align:center;"><div style="font-size:16px;font-weight:800;color:#22c55e;">847</div><div style="font-size:6px;color:#64748b;">Scored Today</div></div>
+        <div style="background:#1e293b;border-radius:6px;padding:5px;text-align:center;"><div style="font-size:16px;font-weight:800;color:#f59e0b;">14</div><div style="font-size:6px;color:#64748b;">Flagged</div></div>
+      </div>
+      <div style="background:#1e293b;border-radius:7px;padding:6px 8px;flex:1;">
+        <div style="font-size:7px;color:#94a3b8;margin-bottom:4px;">Score Distribution</div>
+        <div style="display:flex;gap:2px;align-items:flex-end;height:50px;">
+          <div style="flex:1;background:#22c55e;border-radius:2px 2px 0 0;height:30%;opacity:.6;"></div>
+          <div style="flex:1;background:#22c55e;border-radius:2px 2px 0 0;height:55%;opacity:.8;"></div>
+          <div style="flex:1;background:#22c55e;border-radius:2px 2px 0 0;height:90%;"></div>
+          <div style="flex:1;background:#22c55e;border-radius:2px 2px 0 0;height:75%;"></div>
+          <div style="flex:1;background:#f59e0b;border-radius:2px 2px 0 0;height:35%;"></div>
+          <div style="flex:1;background:#FF1A1A;border-radius:2px 2px 0 0;height:15%;"></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-top:2px;">
+          <span style="font-size:6px;color:#22c55e;">90–100</span><span style="font-size:6px;color:#f59e0b;">70–89</span><span style="font-size:6px;color:#FF1A1A;">&lt;70</span>
+        </div>
+      </div>
+      <div style="background:#1e293b;border-radius:6px;padding:4px 7px;display:flex;justify-content:space-between;align-items:center;">
+        <span style="font-size:7px;color:#e2e8f0;">Last flag: Agent #A-219</span>
+        <span style="font-size:7px;color:#f59e0b;font-weight:600;">Review →</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mk-label">100% call coverage · UAE / KSA bureau</div>
+
+</div>
         <div class="case-card__tech">
           <p class="case-card__section-label">Technology</p>
           <div class="tech-tags"><span class="tech-tag">Dual-Language STT</span><span class="tech-tag">Diarization Model</span><span class="tech-tag">Claude Sonnet</span></div>
         </div>
       </div>
-
-      <div class="case-card fade-in" data-stream="FinTech / Banking" style="transition-delay:.05s">
+      <div class="case-card fade-in" data-stream="FinTech / Banking" style="transition-delay:0.05s">
         <div class="case-card__header">
           <div class="case-card__badges">
             <span class="badge badge--fintech">FinTech &amp; Banking</span>
             <span class="badge badge--market">Central Asia</span>
           </div>
-          <h3 class="case-card__title">Reinsurance Process Automation &amp; Risk Assessment</h3>
-          <p class="case-card__client">Insurance Company · Central Asia</p>
+          <h3 class="case-card__title">Reinsurance Process Automation & Risk Assessment</h3>
+          <p class="case-card__client">Insurance Company - Central Asia</p>
         </div>
         <div class="case-card__body">
           <div>
             <p class="case-card__section-label">Challenge</p>
-            <p class="case-card__text">Actuary experts manually processed tens of thousands of reinsurance applications monthly; process relied on key experts, creating scaling barriers.</p>
+            <p class="case-card__text">Actuary experts manually processed tens of thousands of reinsurance applications monthly; process relied on key experts.</p>
           </div>
           <div>
             <p class="case-card__section-label">Solution</p>
-            <p class="case-card__text">Email system integration + multi-format document ingestion (PDF, Word, Excel, PPT) + on-premise open-source LLM for rule application and automated risk assessment.</p>
+            <p class="case-card__text">Email system integration + multi-format document ingestion + on-premise open-source LLM for rule application and automated risk assessment.</p>
           </div>
-          <div class="case-card__metrics">
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Examination time: 30 min → 5 min per inquiry</span></div>
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Named Entity Recognition precision ~90%</span></div>
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Human-factor mitigation in decision-making</span></div>
-          </div>
+          <div class="case-card__metrics"><div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Examination time: 30 min to 5 min per inquiry</span></div>
+<div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Named Entity Recognition precision ~90%</span></div>
+<div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Human-factor mitigation</span></div></div>
         </div>
-        <div class="case-card__tech">
-          <p class="case-card__section-label">Technology</p>
-          <div class="tech-tags"><span class="tech-tag">Document Ingestion</span><span class="tech-tag">On-prem Open-Source LLM</span><span class="tech-tag">Named Entity Recognition</span></div>
+        <div class="mockup-wrap">
+<div class="mk-phone">
+  <div class="mk-phone-bar"><div class="mk-phone-dot"></div><div class="mk-phone-notch"></div></div>
+  <div class="mk-screen">
+    <div class="mk-header" style="background:#1e3a5f;">
+      <span class="mk-header-title">Risk Assessment · AI</span>
+      <span style="font-size:7px;background:rgba(255,255,255,.15);padding:2px 5px;border-radius:4px;color:#fff;">Reinsurance</span>
+    </div>
+    <div style="padding:6px 7px;background:#f5f7fa;height:165px;overflow:hidden;display:flex;flex-direction:column;gap:4px;">
+      <div style="background:#fff;border-radius:7px;padding:6px 8px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+          <span style="font-size:8px;font-weight:700;color:#141414;">Contract #RI-2024-0088</span>
+          <span style="font-size:7px;background:#fff7ed;color:#c2410c;padding:1px 5px;border-radius:4px;font-weight:600;">Medium Risk</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:2px;">
+          <div style="display:flex;justify-content:space-between;"><span style="font-size:7px;color:#888;">Exposure</span><span style="font-size:7px;color:#141414;font-weight:600;">$4.2M</span></div>
+          <div style="display:flex;justify-content:space-between;"><span style="font-size:7px;color:#888;">Loss ratio</span><span style="font-size:7px;color:#f59e0b;font-weight:600;">68% ⚠</span></div>
+          <div style="display:flex;justify-content:space-between;"><span style="font-size:7px;color:#888;">AI confidence</span><span style="font-size:7px;color:#22c55e;font-weight:600;">94%</span></div>
         </div>
       </div>
+      <div style="background:#fff;border-radius:7px;padding:5px 8px;">
+        <div style="font-size:7px;color:#888;margin-bottom:3px;">AI Recommendation</div>
+        <div style="font-size:7.5px;color:#1e3a5f;line-height:1.4;">Apply 15% premium loading. Flag catastrophe clause §4.2 for manual review. Auto-rules applied: ✓ 12 of 14.</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:auto;">
+        <div style="background:#f0f4f8;border-radius:6px;padding:4px;text-align:center;"><span style="font-size:7px;color:#1e3a5f;">View Full Report</span></div>
+        <div style="background:#1e3a5f;border-radius:6px;padding:4px;text-align:center;"><span style="font-size:7px;color:#fff;font-weight:600;">Accept Terms</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mk-label">AI reinsurance · Central Asia insurer</div>
 
-      <div class="case-card fade-in" data-stream="FinTech / Banking" style="transition-delay:.1s">
+</div>
+        <div class="case-card__tech">
+          <p class="case-card__section-label">Technology</p>
+          <div class="tech-tags"><span class="tech-tag">Document Ingestion</span><span class="tech-tag">On-prem LLM</span><span class="tech-tag">Named Entity Recognition</span></div>
+        </div>
+      </div>
+      <div class="case-card fade-in" data-stream="FinTech / Banking" style="transition-delay:0.1s">
         <div class="case-card__header">
           <div class="case-card__badges">
             <span class="badge badge--fintech">FinTech &amp; Banking</span>
             <span class="badge badge--market">Qatar</span>
           </div>
           <h3 class="case-card__title">AI Assistant for Executive Briefings</h3>
-          <p class="case-card__client">Large Bank · Qatar</p>
+          <p class="case-card__client">Large Bank - Qatar</p>
         </div>
         <div class="case-card__body">
           <div>
             <p class="case-card__section-label">Challenge</p>
-            <p class="case-card__text">C-suite required comprehensive daily market intelligence; analysts spent 3–4 hours manually compiling briefing materials from 50+ sources.</p>
+            <p class="case-card__text">C-suite required comprehensive daily market intelligence; analysts spent 3-4 hours manually compiling from 50+ sources.</p>
           </div>
           <div>
             <p class="case-card__section-label">Solution</p>
-            <p class="case-card__text">Multi-source web scraping engine (Reuters, Bloomberg, WSJ) + financial data API integration + LLM-powered sentiment analysis and automated executive summary generation.</p>
+            <p class="case-card__text">Multi-source web scraping engine + financial data API integration + LLM-powered sentiment analysis + automated executive summary generation.</p>
           </div>
-          <div class="case-card__metrics">
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Briefing prep time: 4 hours → 15 minutes</span></div>
-          </div>
+          <div class="case-card__metrics"><div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Briefing prep time: 4 hours to 15 minutes</span></div></div>
         </div>
+        <div class="mockup-wrap">
+<div class="mk-phone">
+  <div class="mk-phone-bar"><div class="mk-phone-dot"></div><div class="mk-phone-notch"></div></div>
+  <div class="mk-screen">
+    <div class="mk-header" style="background:#0f172a;">
+      <span class="mk-header-title">CEO Brief · Qatar Bank</span>
+      <span class="mk-status-dot"></span>
+    </div>
+    <div style="background:#0f172a;padding:6px 7px;height:165px;overflow:hidden;display:flex;flex-direction:column;gap:4px;">
+      <div style="background:#1e293b;border-radius:7px;padding:6px 8px;">
+        <div style="font-size:7px;color:#94a3b8;margin-bottom:2px;">Today's AI Brief — 07:00 AM</div>
+        <div style="font-size:8px;font-weight:700;color:#fff;margin-bottom:3px;">Portfolio Snapshot</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;">
+          <div style="text-align:center;"><div style="font-size:11px;font-weight:800;color:#22c55e;">+2.3%</div><div style="font-size:6px;color:#64748b;">NII Growth</div></div>
+          <div style="text-align:center;"><div style="font-size:11px;font-weight:800;color:#f59e0b;">4.1%</div><div style="font-size:6px;color:#64748b;">NPL Ratio</div></div>
+          <div style="text-align:center;"><div style="font-size:11px;font-weight:800;color:#FF1A1A;">↑12</div><div style="font-size:6px;color:#64748b;">Alerts</div></div>
+        </div>
+      </div>
+      <div style="background:#1e293b;border-radius:7px;padding:5px 7px;flex:1;">
+        <div style="font-size:6.5px;color:#64748b;font-style:italic;margin-bottom:3px;">"What drove the NII increase this week?"</div>
+        <div style="font-size:7.5px;color:#e2e8f0;line-height:1.5;">Retail deposits +QAR 340M (term renewals). Corporate lending spreads widened 12bps. FX gains offset by hedging cost.</div>
+      </div>
+      <div style="background:#FF1A1A;border-radius:6px;padding:4px 8px;text-align:center;">
+        <span style="font-size:7px;color:#fff;font-weight:600;">Generate Board Deck →</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mk-label">AI executive brief · Qatar bank</div>
+
+</div>
         <div class="case-card__tech">
           <p class="case-card__section-label">Technology</p>
           <div class="tech-tags"><span class="tech-tag">Web Scraping Engine</span><span class="tech-tag">Financial Data APIs</span><span class="tech-tag">LLM Sentiment Analysis</span></div>
         </div>
       </div>
-
-      <div class="case-card fade-in" data-stream="FinTech / Banking" style="transition-delay:.15s">
+      <div class="case-card fade-in" data-stream="FinTech / Banking" style="transition-delay:0.15s">
         <div class="case-card__header">
           <div class="case-card__badges">
             <span class="badge badge--fintech">FinTech &amp; Banking</span>
             <span class="badge badge--market">Undisclosed</span>
           </div>
-          <h3 class="case-card__title">AI Assistant for SME Head &amp; Relationship Managers</h3>
+          <h3 class="case-card__title">AI Assistant for SME Head & Relationship Managers</h3>
           <p class="case-card__client">Large Regional Bank</p>
         </div>
         <div class="case-card__body">
           <div>
             <p class="case-card__section-label">Challenge</p>
-            <p class="case-card__text">Slow decision-making due to manual analytics; low BI tool adoption by sales-focused staff; no unified view combining client data, market trends, and actionable insights.</p>
+            <p class="case-card__text">Slow decision-making due to manual analytics; low BI tool adoption by sales-focused staff; no unified view of client data.</p>
           </div>
           <div>
             <p class="case-card__section-label">Solution</p>
-            <p class="case-card__text">Universal AI assistant with natural language interface (NL→SQL) integrated into CRM; automates personalised client insights, KPI tracking, and self-service analytics for all staff.</p>
+            <p class="case-card__text">Universal AI assistant with natural language interface (NL to SQL) integrated into CRM; automates personalised client insights and self-service analytics.</p>
           </div>
-          <div class="case-card__metrics">
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Client briefings reduced from hours to minutes</span></div>
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Data self-service access enabled for all staff</span></div>
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Proactive client management now enabled</span></div>
-          </div>
+          <div class="case-card__metrics"><div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Client briefings reduced from hours to minutes</span></div>
+<div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Data self-service access enabled for all staff</span></div>
+<div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Proactive client management enabled</span></div></div>
         </div>
-        <div class="case-card__tech">
-          <p class="case-card__section-label">Technology</p>
-          <div class="tech-tags"><span class="tech-tag">NL→SQL Assistant</span><span class="tech-tag">CRM Integration</span><span class="tech-tag">Personalised Insight Engine</span></div>
+        <div class="mockup-wrap">
+<div class="mk-phone">
+  <div class="mk-phone-bar"><div class="mk-phone-dot"></div><div class="mk-phone-notch"></div></div>
+  <div class="mk-screen">
+    <div class="mk-header" style="background:#1B5E37;">
+      <span class="mk-header-title">SME Portfolio · RM</span>
+      <span class="mk-status-dot"></span>
+    </div>
+    <div style="padding:6px 7px;background:#f9fafb;height:165px;overflow:hidden;display:flex;flex-direction:column;gap:4px;">
+      <div style="background:#fff;border-radius:7px;padding:5px 8px;">
+        <div style="font-size:7px;color:#888;margin-bottom:3px;">My SME Clients — 42 accounts</div>
+        <div class="mk-tx-row">
+          <div style="display:flex;align-items:center;gap:5px;">
+            <div style="width:20px;height:20px;border-radius:50%;background:#e0f2fe;display:flex;align-items:center;justify-content:center;font-size:9px;">🏭</div>
+            <div><div style="font-size:8px;font-weight:600;color:#141414;">Al-Noor Trading</div><div style="font-size:6.5px;color:#888;">Limit: $500K · Used 78%</div></div>
+          </div>
+          <span style="font-size:7px;color:#f59e0b;font-weight:700;">At Risk</span>
+        </div>
+        <div class="mk-tx-row">
+          <div style="display:flex;align-items:center;gap:5px;">
+            <div style="width:20px;height:20px;border-radius:50%;background:#dcfce7;display:flex;align-items:center;justify-content:center;font-size:9px;">🏗️</div>
+            <div><div style="font-size:8px;font-weight:600;color:#141414;">Gulf Construct</div><div style="font-size:6.5px;color:#888;">Limit: $1.2M · Used 42%</div></div>
+          </div>
+          <span style="font-size:7px;color:#22c55e;font-weight:700;">Healthy</span>
         </div>
       </div>
+      <div style="background:#e0f2fe;border-radius:6px;padding:5px 7px;">
+        <div style="font-size:6.5px;color:#0369a1;margin-bottom:2px;">💡 AI Opportunity</div>
+        <div style="font-size:7.5px;color:#0c4a6e;line-height:1.4;">Al-Noor eligible for $200K trade finance facility. Call recommended by Friday.</div>
+      </div>
+      <div style="background:#1B5E37;border-radius:6px;padding:4px 8px;text-align:center;margin-top:auto;">
+        <span style="font-size:7px;color:#fff;font-weight:600;">Prepare Proposal →</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mk-label">AI RM assistant · SME portfolio</div>
 
+</div>
+        <div class="case-card__tech">
+          <p class="case-card__section-label">Technology</p>
+          <div class="tech-tags"><span class="tech-tag">NL to SQL Assistant</span><span class="tech-tag">CRM Integration</span><span class="tech-tag">Personalised Insight Engine</span></div>
+        </div>
+      </div>
+      <div class="case-card fade-in" 
       <div id="maas" style="position:relative;top:-80px;visibility:hidden;"></div>
-      <!-- ── MaaS ────────────────────────────────────────────────── -->
-
-      <div class="case-card fade-in" data-stream="MaaS" style="transition-delay:.05s">
+      <!-- MaaS cases -->
+data-stream="MaaS" style="transition-delay:0.05s">
         <div class="case-card__header">
           <div class="case-card__badges">
             <span class="badge badge--maas">MaaS</span>
-            <span class="badge badge--market">Armenia · Yerevan</span>
+            <span class="badge badge--market">Armenia - Yerevan</span>
           </div>
           <h3 class="case-card__title">Integrated Public Transport Management System</h3>
-          <p class="case-card__client">City Government / Transport Authority · Yerevan</p>
+          <p class="case-card__client">City Government / Transport Authority - Yerevan</p>
         </div>
         <div class="case-card__body">
           <div>
             <p class="case-card__section-label">Challenge</p>
-            <p class="case-card__text">Low public transport speed (10–15 km/h), poor route coverage in underserved districts, high fare evasion, and limited data-driven decision-making for operators.</p>
+            <p class="case-card__text">Low public transport speed (10-15 km/h), poor route coverage, high fare evasion, and limited data-driven decision-making.</p>
           </div>
           <div>
             <p class="case-card__section-label">Solution</p>
-            <p class="case-card__text">End-to-end platform covering analytics, dispatching, on-board bus equipment (passenger counting, driver monitoring), and inspector route planning based on fare payment and passenger flow data.</p>
+            <p class="case-card__text">End-to-end platform covering analytics, dispatching, on-board bus equipment, and inspector route planning based on fare payment and passenger flow data.</p>
           </div>
-          <div class="case-card__metrics">
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">~$115M USD/year additional revenue (preliminary est.)</span></div>
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">~30% increase in fare revenue</span></div>
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">+30% growth in paid passenger trips</span></div>
-          </div>
+          <div class="case-card__metrics"><div class="metric-item"><span class="metric-dot"></span><span class="metric-text">~$115M USD/year additional revenue (preliminary est.)</span></div>
+<div class="metric-item"><span class="metric-dot"></span><span class="metric-text">~30% increase in fare revenue</span></div>
+<div class="metric-item"><span class="metric-dot"></span><span class="metric-text">+30% growth in paid passenger trips</span></div></div>
         </div>
+        <div class="mockup-wrap">
+<div class="mk-tablet">
+  <div class="mk-screen">
+    <div class="mk-header" style="background:#1a1a2e;">
+      <span class="mk-header-title">Yerevan Transit · Command</span>
+      <span class="mk-live-dot"></span>
+    </div>
+    <div style="background:#0f172a;padding:6px 8px;height:160px;overflow:hidden;display:flex;flex-direction:column;gap:4px;">
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:3px;">
+        <div style="background:#1e293b;border-radius:5px;padding:4px;text-align:center;"><div style="font-size:12px;font-weight:800;color:#22c55e;">142</div><div style="font-size:5.5px;color:#64748b;">Buses Live</div></div>
+        <div style="background:#1e293b;border-radius:5px;padding:4px;text-align:center;"><div style="font-size:12px;font-weight:800;color:#f59e0b;">3</div><div style="font-size:5.5px;color:#64748b;">Delayed</div></div>
+        <div style="background:#1e293b;border-radius:5px;padding:4px;text-align:center;"><div style="font-size:12px;font-weight:800;color:#FF1A1A;">1</div><div style="font-size:5.5px;color:#64748b;">Breakdown</div></div>
+        <div style="background:#1e293b;border-radius:5px;padding:4px;text-align:center;"><div style="font-size:12px;font-weight:800;color:#38bdf8;">18m</div><div style="font-size:5.5px;color:#64748b;">Avg Wait</div></div>
+      </div>
+      <div style="background:#1e293b;border-radius:7px;padding:5px 7px;flex:1;position:relative;overflow:hidden;">
+        <div style="font-size:6.5px;color:#94a3b8;margin-bottom:3px;">Live Route Map · Yerevan</div>
+        <div style="position:relative;height:85px;background:#0f172a;border-radius:5px;overflow:hidden;">
+          <div style="position:absolute;top:20px;left:10px;right:10px;height:2px;background:#334155;border-radius:1px;"></div>
+          <div style="position:absolute;top:45px;left:10px;right:10px;height:2px;background:#334155;border-radius:1px;"></div>
+          <div style="position:absolute;left:30px;top:10px;bottom:10px;width:2px;background:#334155;border-radius:1px;"></div>
+          <div style="position:absolute;right:50px;top:10px;bottom:10px;width:2px;background:#334155;border-radius:1px;"></div>
+          <div style="position:absolute;top:16px;left:25px;font-size:10px;animation:busMove 3s ease-in-out infinite alternate;">🚌</div>
+          <div style="position:absolute;top:40px;left:80px;font-size:10px;animation:busMove 2.5s ease-in-out infinite alternate-reverse;">🚌</div>
+          <div style="position:absolute;top:40px;right:55px;font-size:10px;color:#f59e0b;animation:busMove 4s ease-in-out infinite alternate;">🚌</div>
+          <div style="position:absolute;top:20px;left:80px;width:6px;height:6px;border-radius:50%;background:#22c55e;box-shadow:0 0 6px #22c55e;"></div>
+          <div style="position:absolute;top:45px;left:30px;width:6px;height:6px;border-radius:50%;background:#22c55e;box-shadow:0 0 6px #22c55e;"></div>
+          <div style="position:absolute;top:20px;right:55px;width:6px;height:6px;border-radius:50%;background:#FF1A1A;box-shadow:0 0 6px #FF1A1A;animation:pulse 1s infinite;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mk-label">Real-time dispatch · Yerevan transit</div>
+
+</div>
         <div class="case-card__tech">
           <p class="case-card__section-label">Technology</p>
           <div class="tech-tags"><span class="tech-tag">Yango City Platform</span><span class="tech-tag">Yandex Maps</span><span class="tech-tag">On-board IoT</span><span class="tech-tag">Schedule Optimizer</span></div>
         </div>
-      </div>
 
-      <div class="case-card fade-in" data-stream="MaaS" style="transition-delay:.1s">
+      </div>
+      <div class="case-card fade-in" data-stream="MaaS" style="transition-delay:0.1s">
         <div class="case-card__header">
           <div class="case-card__badges">
             <span class="badge badge--maas">MaaS</span>
-            <span class="badge badge--market">Russia · Yaroslavl</span>
+            <span class="badge badge--market">Russia - Yaroslavl</span>
           </div>
-          <h3 class="case-card__title">Public Transport Schedule &amp; Route Optimisation</h3>
-          <p class="case-card__client">City Government / Transport Authority · Yaroslavl</p>
+          <h3 class="case-card__title">Public Transport Schedule & Route Optimisation</h3>
+          <p class="case-card__client">City Government / Transport Authority - Yaroslavl</p>
         </div>
         <div class="case-card__body">
           <div>
             <p class="case-card__section-label">Challenge</p>
-            <p class="case-card__text">Inefficient vehicle class matching, poor service intervals, underutilised vehicles, and sub-optimal route lengths across the city network.</p>
+            <p class="case-card__text">Inefficient vehicle class matching, poor service intervals, underutilised vehicles, and sub-optimal route lengths.</p>
           </div>
           <div>
             <p class="case-card__section-label">Solution</p>
-            <p class="case-card__text">Data-driven schedule optimisation using multi-route planning: vehicle class adjustment, interval changes, route extension/shortening, and reduction of underutilised vehicles.</p>
+            <p class="case-card__text">Data-driven schedule optimisation: vehicle class adjustment, interval changes, route extension/shortening, and reduction of underutilised vehicles.</p>
           </div>
-          <div class="case-card__metrics">
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Smarter vehicle allocation across routes</span></div>
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Better route coverage, improved passenger experience</span></div>
-          </div>
+          <div class="case-card__metrics"><div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Smarter vehicle allocation across routes</span></div>
+<div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Better route coverage and improved passenger experience</span></div></div>
         </div>
+        <div class="mockup-wrap">
+<div class="mk-phone">
+  <div class="mk-phone-bar"><div class="mk-phone-dot"></div><div class="mk-phone-notch"></div></div>
+  <div class="mk-screen">
+    <div class="mk-header" style="background:#7A4500;">
+      <span class="mk-header-title">Route Optimiser</span>
+      <span style="font-size:6.5px;background:rgba(255,255,255,.2);padding:2px 5px;border-radius:4px;color:#fff;">Yaroslavl</span>
+    </div>
+    <div style="padding:6px 7px;background:#fafafa;height:165px;overflow:hidden;display:flex;flex-direction:column;gap:4px;">
+      <div style="background:#fff;border-radius:7px;padding:5px 8px;">
+        <div style="font-size:7px;color:#888;margin-bottom:3px;">Route #14 — Optimisation Proposal</div>
+        <div style="display:flex;flex-direction:column;gap:2px;">
+          <div class="mk-route-row"><span style="font-size:7.5px;color:#141414;">Current schedule</span><span style="font-size:7px;color:#f59e0b;">Every 18 min</span></div>
+          <div class="mk-route-row"><span style="font-size:7.5px;color:#141414;">AI proposal</span><span style="font-size:7px;color:#22c55e;font-weight:700;">Every 12 min ↑</span></div>
+          <div class="mk-route-row"><span style="font-size:7.5px;color:#141414;">Peak load</span><span style="font-size:7px;color:#141414;">07:30–09:00</span></div>
+          <div class="mk-route-row"><span style="font-size:7.5px;color:#141414;">Fuel saving</span><span style="font-size:7px;color:#22c55e;font-weight:700;">−8%</span></div>
+        </div>
+      </div>
+      <div style="background:#fff3e0;border-radius:6px;padding:5px 7px;">
+        <div style="font-size:6.5px;color:#7A4500;margin-bottom:2px;">🤖 AI Insight</div>
+        <div style="font-size:7.5px;color:#4a2500;line-height:1.4;">Reduce bus count on Route 22 by 2 during off-peak. Reallocate to Route 14 morning peak. +12% coverage.</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:auto;">
+        <div style="background:#f5f5f5;border-radius:6px;padding:4px;text-align:center;"><span style="font-size:7px;color:#555;">Simulate →</span></div>
+        <div style="background:#7A4500;border-radius:6px;padding:4px;text-align:center;"><span style="font-size:7px;color:#fff;font-weight:600;">Apply →</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mk-label">AI route optimiser · Yaroslavl transit</div>
+
+</div>
         <div class="case-card__tech">
           <p class="case-card__section-label">Technology</p>
           <div class="tech-tags"><span class="tech-tag">Yango City Platform</span><span class="tech-tag">Schedule Optimisation Algorithm</span><span class="tech-tag">Yandex Maps</span></div>
         </div>
-      </div>
 
-      <div class="case-card fade-in" data-stream="MaaS" style="transition-delay:.15s">
+      </div>
+      <div class="case-card fade-in" data-stream="MaaS" style="transition-delay:0.15s">
         <div class="case-card__header">
           <div class="case-card__badges">
             <span class="badge badge--maas">MaaS</span>
-            <span class="badge badge--market">Russia · Yaroslavl</span>
+            <span class="badge badge--market">Russia - Yaroslavl</span>
           </div>
-          <h3 class="case-card__title">Fare Evasion Detection &amp; Inspector Routing</h3>
-          <p class="case-card__client">City Government / Transport Authority · Yaroslavl</p>
-        </div>
-      <div class="case-card fade-in" data-stream="MaaS" style="transition-delay:.2s">
-        <div class="case-card__header">
-          <div class="case-card__badges">
-            <span class="badge badge--maas">MaaS</span>
-            <span class="badge badge--market">Russia · Moscow</span>
-          </div>
-          <h3 class="case-card__title">Smart City Transport &amp; Mobility Platform</h3>
-          <p class="case-card__client">City Transport Authority · Moscow, Russia</p>
+          <h3 class="case-card__title">Fare Evasion Detection & Inspector Routing</h3>
+          <p class="case-card__client">City Government / Transport Authority - Yaroslavl</p>
         </div>
         <div class="case-card__body">
           <div>
             <p class="case-card__section-label">Challenge</p>
-            <p class="case-card__text">Fragmented urban mobility systems, limited real-time fleet visibility, no unified management of public transport dispatching, parking, and road asset maintenance.</p>
-          </div>
-          <div>
-            <p class="case-card__section-label">Solution</p>
-            <p class="case-card__text">Multi-layer smart city transport platform: public transport dispatching with GPS tracking, municipal fleet management, parking payment &amp; ANPR, road marking condition management, and utility service routing.</p>
-          </div>
-          <div class="case-card__metrics">
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Real-time operational visibility across transport networks</span></div>
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Automated work reporting &amp; smarter route planning</span></div>
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Improved parking revenue collection via ANPR</span></div>
-          </div>
-        </div>
-        <div class="case-card__tech">
-          <p class="case-card__section-label">Technology</p>
-          <div class="tech-tags"><span class="tech-tag">Yango City Platform</span><span class="tech-tag">GPS Fleet Tracking</span><span class="tech-tag">ANPR</span><span class="tech-tag">GIS Integration</span><span class="tech-tag">Road Asset Management</span></div>
-        </div>
-      </div>
-
-
-        <div class="case-card__body">
-          <div>
-            <p class="case-card__section-label">Challenge</p>
-            <p class="case-card__text">Above-average fare evasion in the Frunzensky District; manual inspector deployment without data insight, resulting in low detection efficiency.</p>
+            <p class="case-card__text">Above-average fare evasion in Frunzensky District; manual inspector deployment without data insight.</p>
           </div>
           <div>
             <p class="case-card__section-label">Solution</p>
             <p class="case-card__text">Data-driven planning of inspector patrol routes based on fare payment data and passenger flow, precisely targeting high-evasion zones.</p>
           </div>
-          <div class="case-card__metrics">
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Higher fare collection in targeted districts</span></div>
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Data-backed deployment replacing manual guesswork</span></div>
-          </div>
+          <div class="case-card__metrics"><div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Higher fare collection in targeted districts</span></div>
+<div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Data-backed inspector deployment replacing manual guesswork</span></div></div>
         </div>
+        <div class="mockup-wrap">
+<div class="mk-phone">
+  <div class="mk-phone-bar"><div class="mk-phone-dot"></div><div class="mk-phone-notch"></div></div>
+  <div class="mk-screen">
+    <div class="mk-header" style="background:#7A4500;">
+      <span class="mk-header-title">Inspector Routing</span>
+      <span class="mk-live-dot"></span>
+    </div>
+    <div style="padding:0;background:#1a1a2e;height:165px;overflow:hidden;display:flex;flex-direction:column;gap:0;">
+      <div style="padding:5px 7px;background:#0f172a;display:flex;flex-direction:column;gap:3px;flex:1;">
+        <div style="font-size:6.5px;color:#94a3b8;">Evasion Heatmap · Yaroslavl · Live</div>
+        <div style="position:relative;height:80px;background:#1e293b;border-radius:6px;overflow:hidden;">
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse 30% 30% at 35% 55%, rgba(255,26,26,.5) 0%, transparent 70%), radial-gradient(ellipse 20% 20% at 70% 30%, rgba(245,158,11,.4) 0%, transparent 60%);"></div>
+          <div style="position:absolute;top:20px;left:10px;right:10px;height:1px;background:rgba(255,255,255,.1);"></div>
+          <div style="position:absolute;top:40px;left:10px;right:10px;height:1px;background:rgba(255,255,255,.1);"></div>
+          <div style="position:absolute;left:25px;top:10px;bottom:10px;width:1px;background:rgba(255,255,255,.1);"></div>
+          <div style="position:absolute;top:46px;left:28px;font-size:10px;animation:busMove 4s ease-in-out infinite alternate;">🚶</div>
+          <div style="position:absolute;top:22px;left:62px;font-size:10px;animation:busMove 3s ease-in-out infinite;">🚶</div>
+          <div style="position:absolute;top:30px;right:20px;width:8px;height:8px;border-radius:50%;background:#FF1A1A;animation:pulse 1s infinite;opacity:.9;"></div>
+          <div style="position:absolute;top:15px;left:55px;width:6px;height:6px;border-radius:50%;background:#f59e0b;animation:pulse 1.5s infinite;"></div>
+        </div>
+        <div style="background:#1e293b;border-radius:6px;padding:4px 7px;display:flex;justify-content:space-between;align-items:center;">
+          <div style="font-size:7px;color:#e2e8f0;">Inspector → Stop 14 <span style="color:#FF1A1A;font-weight:700;">(HIGH)</span></div>
+          <span style="font-size:6.5px;color:#94a3b8;">2 min away</span>
+        </div>
+      </div>
+      <div style="padding:4px 7px;background:#0f172a;display:flex;gap:3px;">
+        <div style="background:#1e293b;border-radius:5px;padding:3px 6px;flex:1;text-align:center;"><span style="font-size:6.5px;color:#FF1A1A;font-weight:700;">5 Hotspots</span></div>
+        <div style="background:#1e293b;border-radius:5px;padding:3px 6px;flex:1;text-align:center;"><span style="font-size:6.5px;color:#22c55e;">4 Inspectors</span></div>
+        <div style="background:#FF1A1A;border-radius:5px;padding:3px 6px;flex:1;text-align:center;"><span style="font-size:6.5px;color:#fff;font-weight:700;">Deploy All</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mk-label">AI inspector routing · evasion heatmap</div>
+
+</div>
         <div class="case-card__tech">
           <p class="case-card__section-label">Technology</p>
           <div class="tech-tags"><span class="tech-tag">Fare Evasion Analytics</span><span class="tech-tag">Passenger Flow Data</span><span class="tech-tag">Inspector Routing Algorithm</span></div>
         </div>
+
       </div>
+      <div class="case-card fade-in" data-stream="MaaS" style="transition-delay:0.05s">
+        <div class="case-card__header">
+          <div class="case-card__badges">
+            <span class="badge badge--maas">MaaS</span>
+            <span class="badge badge--market">Russia - Moscow</span>
+          </div>
+          <h3 class="case-card__title">Smart City Transport & Mobility Platform</h3>
+          <p class="case-card__client">City Transport Authority - Moscow, Russia</p>
+        </div>
+        <div class="case-card__body">
+          <div>
+            <p class="case-card__section-label">Challenge</p>
+            <p class="case-card__text">Fragmented urban mobility systems, limited real-time fleet visibility, no unified management of transport dispatching, parking, and road assets.</p>
+          </div>
+          <div>
+            <p class="case-card__section-label">Solution</p>
+            <p class="case-card__text">Multi-layer smart city platform: public transport dispatching with GPS tracking, fleet management, parking payment & ANPR, road marking management.</p>
+          </div>
+          <div class="case-card__metrics"><div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Real-time operational visibility across transport networks</span></div>
+<div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Automated work reporting and smarter route planning</span></div>
+<div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Improved parking revenue collection via ANPR</span></div></div>
+        </div>
+        <div class="mockup-wrap">
+<div class="mk-tablet">
+  <div class="mk-screen">
+    <div class="mk-header" style="background:#0f172a;">
+      <span class="mk-header-title">Moscow Mobility Hub</span>
+      <span class="mk-live-dot"></span>
+    </div>
+    <div style="background:#0f172a;padding:5px 7px;height:155px;overflow:hidden;display:flex;flex-direction:column;gap:4px;">
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;">
+        <div style="background:#1e293b;border-radius:6px;padding:5px;text-align:center;border-top:2px solid #38bdf8;"><div style="font-size:10px;font-weight:800;color:#38bdf8;">Bus</div><div style="font-size:11px;font-weight:800;color:#fff;">312</div><div style="font-size:5.5px;color:#64748b;">Active</div></div>
+        <div style="background:#1e293b;border-radius:6px;padding:5px;text-align:center;border-top:2px solid #22c55e;"><div style="font-size:10px;font-weight:800;color:#22c55e;">Park</div><div style="font-size:11px;font-weight:800;color:#fff;">1,840</div><div style="font-size:5.5px;color:#64748b;">Spaces</div></div>
+        <div style="background:#1e293b;border-radius:6px;padding:5px;text-align:center;border-top:2px solid #a855f7;"><div style="font-size:10px;font-weight:800;color:#a855f7;">Fleet</div><div style="font-size:11px;font-weight:800;color:#fff;">67</div><div style="font-size:5.5px;color:#64748b;">Utility</div></div>
+      </div>
+      <div style="background:#1e293b;border-radius:6px;padding:5px 7px;display:flex;flex-direction:column;gap:2px;flex:1;">
+        <div style="font-size:6.5px;color:#94a3b8;">Parking revenue · Today</div>
+        <div style="display:flex;gap:2px;align-items:flex-end;height:40px;">
+          <div style="flex:1;background:#a855f7;border-radius:2px 2px 0 0;height:40%;opacity:.6;"></div>
+          <div style="flex:1;background:#a855f7;border-radius:2px 2px 0 0;height:55%;opacity:.7;"></div>
+          <div style="flex:1;background:#a855f7;border-radius:2px 2px 0 0;height:80%;"></div>
+          <div style="flex:1;background:#a855f7;border-radius:2px 2px 0 0;height:90%;"></div>
+          <div style="flex:1;background:#a855f7;border-radius:2px 2px 0 0;height:70%;opacity:.9;"></div>
+          <div style="flex:1;background:#a855f7;border-radius:2px 2px 0 0;height:85%;"></div>
+          <div style="flex:1;background:#FF1A1A;border-radius:2px 2px 0 0;height:95%;animation:pulse 2s infinite;"></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-top:1px;">
+          <span style="font-size:5.5px;color:#64748b;">Mon</span><span style="font-size:5.5px;color:#64748b;">Tue</span><span style="font-size:5.5px;color:#64748b;">Wed</span><span style="font-size:5.5px;color:#64748b;">Thu</span><span style="font-size:5.5px;color:#64748b;">Fri</span><span style="font-size:5.5px;color:#64748b;">Sat</span><span style="font-size:5.5px;color:#FF1A1A;">Now</span>
+        </div>
+      </div>
+      <div style="background:#FF1A1A;border-radius:5px;padding:3px 7px;text-align:center;"><span style="font-size:6.5px;color:#fff;font-weight:600;">ANPR · 124 plates scanned this hour</span></div>
+    </div>
+  </div>
+</div>
+<div class="mk-label">Multi-modal city platform · Moscow</div>
 
+</div>
+        <div class="case-card__tech">
+          <p class="case-card__section-label">Technology</p>
+          <div class="tech-tags"><span class="tech-tag">Yango City Platform</span><span class="tech-tag">GPS Fleet Tracking</span><span class="tech-tag">ANPR</span><span class="tech-tag">GIS Integration</span></div>
+        </div>
+
+      </div>
+      <div class="case-card fade-in" 
       <div id="medtech" style="position:relative;top:-80px;visibility:hidden;"></div>
-            <!-- ── MedTech ─────────────────────────────────────────────── -->
-
-      <div class="case-card fade-in" data-stream="MedTech" style="transition-delay:.05s">
+      <!-- MedTech cases -->
+data-stream="MedTech" style="transition-delay:0.05s">
         <div class="case-card__header">
           <div class="case-card__badges">
             <span class="badge badge--medtech">MedTech</span>
-            <span class="badge badge--market">Russia · Moscow</span>
+            <span class="badge badge--market">Russia - Moscow</span>
           </div>
           <h3 class="case-card__title">Patient Medical Record Search (EMIAS)</h3>
           <p class="case-card__client">Moscow Healthcare System (EMIAS)</p>
@@ -1072,182 +1760,372 @@
         <div class="case-card__body">
           <div>
             <p class="case-card__section-label">Challenge</p>
-            <p class="case-card__text">Doctors limited to 12-minute appointments; ~2 minutes wasted searching fragmented patient records across multiple interface tabs per consultation.</p>
+            <p class="case-card__text">Doctors limited to 12-minute appointments; ~2 minutes wasted searching fragmented patient records across multiple interface tabs.</p>
           </div>
           <div>
             <p class="case-card__section-label">Solution</p>
-            <p class="case-card__text">GPT-based semantic search over patient medical records delivering answers in under 10 seconds, integrated directly within the EMIAS system.</p>
+            <p class="case-card__text">GPT-based semantic search over patient medical records delivering answers in under 10 seconds, integrated within the EMIAS system.</p>
           </div>
-          <div class="case-card__metrics">
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">15% optimization of doctors' appointment time</span></div>
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Improved diagnostic accuracy via timely information access</span></div>
-          </div>
+          <div class="case-card__metrics"><div class="metric-item"><span class="metric-dot"></span><span class="metric-text">15% optimization of doctors appointment time</span></div>
+<div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Improved diagnostic accuracy via timely information access</span></div></div>
         </div>
+        <div class="mockup-wrap">
+<div class="mk-phone">
+  <div class="mk-phone-bar"><div class="mk-phone-dot"></div><div class="mk-phone-notch"></div></div>
+  <div class="mk-screen">
+    <div class="mk-header" style="background:#5B1180;">
+      <span class="mk-header-title">EMIAS · Record Search</span>
+      <span class="mk-status-dot"></span>
+    </div>
+    <div style="padding:6px 7px;background:#fafafa;height:165px;overflow:hidden;display:flex;flex-direction:column;gap:4px;">
+      <div style="background:#fff;border-radius:7px;padding:5px 8px;display:flex;gap:5px;align-items:center;border:1px solid #ede9fe;">
+        <span style="font-size:9px;">🔍</span>
+        <span style="font-size:7.5px;color:#888;flex:1;">Patient ID or name…</span>
+        <span style="font-size:6.5px;background:#5B1180;color:#fff;padding:1px 5px;border-radius:4px;">AI</span>
+      </div>
+      <div style="background:#fff;border-radius:7px;padding:6px 8px;border-left:3px solid #5B1180;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:3px;">
+          <span style="font-size:8px;font-weight:700;color:#141414;">Ivanova, Elena · 38F</span>
+          <span style="font-size:6.5px;background:#f5f3ff;color:#5B1180;padding:1px 5px;border-radius:4px;">ID #EMI-449821</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:2px;">
+          <div style="display:flex;justify-content:space-between;"><span style="font-size:7px;color:#888;">Last visit</span><span style="font-size:7px;color:#141414;">14 Mar 2025</span></div>
+          <div style="display:flex;justify-content:space-between;"><span style="font-size:7px;color:#888;">Diagnosis</span><span style="font-size:7px;color:#141414;">Hypertension (I10)</span></div>
+          <div style="display:flex;justify-content:space-between;"><span style="font-size:7px;color:#888;">Prescription</span><span style="font-size:7px;color:#5B1180;font-weight:600;">Lisinopril 10mg</span></div>
+        </div>
+      </div>
+      <div style="background:#f5f3ff;border-radius:6px;padding:4px 7px;">
+        <span style="font-size:6.5px;color:#5B1180;font-weight:600;">AI: </span>
+        <span style="font-size:7px;color:#555;">BP trend ↑ in last 3 visits. Recommend follow-up in 30 days.</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:auto;">
+        <div style="background:#f5f5f5;border-radius:6px;padding:4px;text-align:center;"><span style="font-size:7px;color:#555;">Full History</span></div>
+        <div style="background:#5B1180;border-radius:6px;padding:4px;text-align:center;"><span style="font-size:7px;color:#fff;font-weight:600;">Book Follow-up</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mk-label">EMIAS EHR search · AI-assisted</div>
+
+</div>
         <div class="case-card__tech">
           <p class="case-card__section-label">Technology</p>
           <div class="tech-tags"><span class="tech-tag">YandexGPT</span><span class="tech-tag">Semantic Search</span><span class="tech-tag">EMIAS Integration</span><span class="tech-tag">Medical NLP</span></div>
         </div>
       </div>
-
-      <div class="case-card fade-in" data-stream="MedTech" style="transition-delay:.1s">
+      <div class="case-card fade-in" data-stream="MedTech" style="transition-delay:0.1s">
         <div class="case-card__header">
           <div class="case-card__badges">
             <span class="badge badge--medtech">MedTech</span>
-            <span class="badge badge--market">Russia · Moscow</span>
+            <span class="badge badge--market">Russia - Moscow</span>
           </div>
-          <h3 class="case-card__title">EMIAS Expert — Clinical Guidelines Assistant</h3>
+          <h3 class="case-card__title">EMIAS Expert - Clinical Guidelines Assistant</h3>
           <p class="case-card__client">Moscow Healthcare System (EMIAS)</p>
         </div>
         <div class="case-card__body">
           <div>
             <p class="case-card__section-label">Challenge</p>
-            <p class="case-card__text">Doctors have no time during 12-minute appointments to consult the full database of clinical guidelines, leading to potential gaps in diagnostic quality.</p>
+            <p class="case-card__text">Doctors have no time during appointments to consult the full database of clinical guidelines.</p>
           </div>
           <div>
             <p class="case-card__section-label">Solution</p>
             <p class="case-card__text">AI assistant trained on approved clinical guidelines and medical publications to support real-time diagnosis and recommendation during appointments.</p>
           </div>
-          <div class="case-card__metrics">
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Improved diagnostic accuracy</span></div>
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Increased doctor eNPS (Employee Net Promoter Score)</span></div>
-          </div>
+          <div class="case-card__metrics"><div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Improved diagnostic accuracy</span></div>
+<div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Increased doctor eNPS (Employee Net Promoter Score)</span></div></div>
         </div>
+        <div class="mockup-wrap">
+<div class="mk-phone">
+  <div class="mk-phone-bar"><div class="mk-phone-dot"></div><div class="mk-phone-notch"></div></div>
+  <div class="mk-screen">
+    <div class="mk-header" style="background:#5B1180;">
+      <span class="mk-header-title">Clinical Guidelines AI</span>
+      <span class="mk-status-dot"></span>
+    </div>
+    <div class="mk-pills-row">
+      <span class="mk-pill" style="background:#5B1180;color:#fff;">Cardiology</span>
+      <span class="mk-pill">Oncology</span>
+      <span class="mk-pill">Paediatrics</span>
+    </div>
+    <div class="mk-chat-area">
+      <div class="mk-msg mk-msg--user" style="background:#5B1180;">Dosage for metformin in T2DM with CKD stage 3?</div>
+      <div class="mk-msg mk-msg--bot" style="background:#f5f3ff;"><span class="mk-bot-dot" style="background:#5B1180;"></span><span style="color:#222;font-size:7.5px;line-height:1.4;">Per MoH Guideline 2024 §4.2: Start 500mg OD if eGFR 30–45. Monitor q3m. Avoid if eGFR &lt;30.</span></div>
+      <div class="mk-typing"><span></span><span></span><span></span></div>
+    </div>
+    <div style="padding:3px 7px;background:#f9f7ff;">
+      <span style="font-size:6.5px;color:#888;">Source: MoH Clinical Protocol v7.1 · 2024</span>
+    </div>
+    <div class="mk-input-row" style="background:#f5f3ff;">
+      <div class="mk-input-mock">Ask about any guideline…</div>
+      <div class="mk-send-btn" style="background:#5B1180;">&#10148;</div>
+    </div>
+  </div>
+</div>
+<div class="mk-label">AI clinical guidelines · EMIAS expert</div>
+
+</div>
         <div class="case-card__tech">
           <p class="case-card__section-label">Technology</p>
           <div class="tech-tags"><span class="tech-tag">YandexGPT Fine-tuned</span><span class="tech-tag">Clinical Knowledge Base</span><span class="tech-tag">RAG</span></div>
         </div>
       </div>
-
-      <div class="case-card fade-in" data-stream="MedTech" style="transition-delay:.15s">
+      <div class="case-card fade-in" data-stream="MedTech" style="transition-delay:0.15s">
         <div class="case-card__header">
           <div class="case-card__badges">
             <span class="badge badge--medtech">MedTech</span>
-            <span class="badge badge--market">Russia · Kazakhstan</span>
+            <span class="badge badge--market">Russia & Kazakhstan</span>
           </div>
-          <h3 class="case-card__title">EMIAS Quality Control — Appointment Audit</h3>
+          <h3 class="case-card__title">EMIAS Quality Control - Appointment Audit</h3>
           <p class="case-card__client">Moscow Healthcare / Kazakhstan Health Insurance Fund</p>
         </div>
         <div class="case-card__body">
           <div>
             <p class="case-card__section-label">Challenge</p>
-            <p class="case-card__text">Healthcare managers and insurers could not assess appointment quality except through patient feedback and retrospective error detection — a slow and incomplete process.</p>
+            <p class="case-card__text">Healthcare managers and insurers could not assess appointment quality except through patient feedback and retrospective error detection.</p>
           </div>
           <div>
             <p class="case-card__section-label">Solution</p>
-            <p class="case-card__text">AI system that automatically checks doctors' recommendations and prescriptions against approved regulatory standards in near real time.</p>
+            <p class="case-card__text">AI system that automatically checks doctors recommendations and prescriptions against approved regulatory standards in near real time.</p>
           </div>
-          <div class="case-card__metrics">
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Time to detect potential medical errors reduced to 1 day</span></div>
-          </div>
+          <div class="case-card__metrics"><div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Time to detect potential medical errors reduced to 1 day</span></div></div>
         </div>
+        <div class="mockup-wrap">
+<div class="mk-phone">
+  <div class="mk-phone-bar"><div class="mk-phone-dot"></div><div class="mk-phone-notch"></div></div>
+  <div class="mk-screen">
+    <div class="mk-header" style="background:#0f172a;">
+      <span class="mk-header-title">Appointment Audit · AI</span>
+      <span class="mk-live-dot"></span>
+    </div>
+    <div style="background:#0f172a;padding:6px 7px;height:165px;overflow:hidden;display:flex;flex-direction:column;gap:4px;">
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;">
+        <div style="background:#1e293b;border-radius:5px;padding:4px;text-align:center;"><div style="font-size:14px;font-weight:800;color:#22c55e;">2,341</div><div style="font-size:5.5px;color:#64748b;">Reviewed</div></div>
+        <div style="background:#1e293b;border-radius:5px;padding:4px;text-align:center;"><div style="font-size:14px;font-weight:800;color:#f59e0b;">87</div><div style="font-size:5.5px;color:#64748b;">Flagged</div></div>
+        <div style="background:#1e293b;border-radius:5px;padding:4px;text-align:center;"><div style="font-size:14px;font-weight:800;color:#FF1A1A;">12</div><div style="font-size:5.5px;color:#64748b;">Critical</div></div>
+      </div>
+      <div style="background:#1e293b;border-radius:7px;padding:5px 7px;flex:1;display:flex;flex-direction:column;gap:3px;">
+        <div style="font-size:6.5px;color:#94a3b8;">Recent flags</div>
+        <div style="background:#0f172a;border-radius:5px;padding:4px 6px;border-left:2px solid #FF1A1A;">
+          <div style="font-size:7.5px;color:#e2e8f0;">Polyclinic #14 — 9 no-shows not rebooked</div>
+          <div style="font-size:6.5px;color:#64748b;margin-top:1px;">EMIAS rule §3.4 breach</div>
+        </div>
+        <div style="background:#0f172a;border-radius:5px;padding:4px 6px;border-left:2px solid #f59e0b;">
+          <div style="font-size:7.5px;color:#e2e8f0;">Polyclinic #07 — appt gap &gt;21 days</div>
+          <div style="font-size:6.5px;color:#64748b;margin-top:1px;">SLA exceeded</div>
+        </div>
+        <div style="background:#FF1A1A;border-radius:5px;padding:3px 6px;text-align:center;margin-top:auto;">
+          <span style="font-size:6.5px;color:#fff;font-weight:600;">Send Auto-Notification →</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mk-label">AI audit · EMIAS + Kazakhstan health fund</div>
+
+</div>
         <div class="case-card__tech">
           <p class="case-card__section-label">Technology</p>
           <div class="tech-tags"><span class="tech-tag">YandexGPT</span><span class="tech-tag">Regulatory Standards NLP</span><span class="tech-tag">Automated Compliance Checker</span></div>
         </div>
       </div>
-
-      <div class="case-card fade-in" data-stream="MedTech" style="transition-delay:.05s">
+      <div class="case-card fade-in" data-stream="MedTech" style="transition-delay:0.05s">
         <div class="case-card__header">
           <div class="case-card__badges">
             <span class="badge badge--medtech">MedTech</span>
-            <span class="badge badge--market">Russia · Moscow</span>
+            <span class="badge badge--market">Russia - Moscow</span>
           </div>
-          <h3 class="case-card__title">AI Appointment Transcription &amp; Record Auto-fill</h3>
+          <h3 class="case-card__title">AI Appointment Transcription & Record Auto-fill</h3>
           <p class="case-card__client">Moscow Healthcare System (EMIAS)</p>
         </div>
         <div class="case-card__body">
           <div>
             <p class="case-card__section-label">Challenge</p>
-            <p class="case-card__text">Doctors limited to 12-minute appointments; ~8 of those minutes spent manually filling out visit documentation, severely reducing patient interaction time.</p>
+            <p class="case-card__text">Doctors limited to 12-minute appointments; ~8 of those minutes spent manually filling out visit documentation.</p>
           </div>
           <div>
             <p class="case-card__section-label">Solution</p>
-            <p class="case-card__text">Microphone records the appointment; AI transcribes and summarises the conversation, then automatically fills out the medical record. The doctor validates the output only.</p>
+            <p class="case-card__text">Microphone records the appointment; AI transcribes and summarises the conversation, then automatically fills out the medical record.</p>
           </div>
-          <div class="case-card__metrics">
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">60% optimization of doctors' appointment time</span></div>
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Increased doctor eNPS</span></div>
+          <div class="case-card__metrics"><div class="metric-item"><span class="metric-dot"></span><span class="metric-text">60% optimization of doctors appointment time</span></div>
+<div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Increased doctor eNPS</span></div></div>
+        </div>
+        <div class="mockup-wrap">
+<div class="mk-phone">
+  <div class="mk-phone-bar"><div class="mk-phone-dot"></div><div class="mk-phone-notch"></div></div>
+  <div class="mk-screen">
+    <div class="mk-header" style="background:#5B1180;">
+      <span class="mk-header-title">AI Transcription · Live</span>
+      <span class="mk-live-dot"></span>
+    </div>
+    <div style="padding:6px 7px;background:#fafafa;height:165px;overflow:hidden;display:flex;flex-direction:column;gap:4px;">
+      <div style="background:#fff;border-radius:7px;padding:6px 8px;border:1px solid #ede9fe;">
+        <div style="display:flex;align-items:center;gap:5px;margin-bottom:4px;">
+          <div style="width:28px;height:28px;border-radius:50%;background:#5B1180;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 6px rgba(91,17,128,.1);">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="white"><path d="M12 15c1.66 0 3-1.34 3-3V6c0-1.66-1.34-3-3-3S9 4.34 9 6v6c0 1.66 1.34 3 3 3z"/><path d="M17 12c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-2.08c3.39-.49 6-3.39 6-6.92h-2z"/></svg>
+          </div>
+          <div>
+            <div style="font-size:8px;font-weight:700;color:#141414;">Recording in progress</div>
+            <div style="display:flex;gap:2px;align-items:center;margin-top:2px;">
+              <div style="width:3px;height:6px;background:#5B1180;border-radius:2px;animation:wave .7s infinite;"></div>
+              <div style="width:3px;height:9px;background:#5B1180;border-radius:2px;animation:wave .7s infinite .1s;"></div>
+              <div style="width:3px;height:7px;background:#5B1180;border-radius:2px;animation:wave .7s infinite .2s;"></div>
+              <div style="width:3px;height:11px;background:#5B1180;border-radius:2px;animation:wave .7s infinite .3s;"></div>
+              <div style="width:3px;height:6px;background:#5B1180;border-radius:2px;animation:wave .7s infinite .15s;"></div>
+            </div>
           </div>
         </div>
+        <div style="font-size:7.5px;color:#555;line-height:1.5;border-top:1px solid #f5f3ff;padding-top:4px;">
+          <span style="color:#888;">Dr: </span>Any chest pain recently?<br>
+          <span style="color:#888;">Pt: </span>Sometimes, mild, after walking upstairs.<br>
+          <span style="color:#888;">Dr: </span>How long does it last?
+        </div>
+      </div>
+      <div style="background:#f5f3ff;border-radius:6px;padding:5px 7px;">
+        <div style="font-size:6.5px;color:#5B1180;font-weight:600;margin-bottom:2px;">Auto-filled EHR fields</div>
+        <div style="display:flex;flex-direction:column;gap:2px;">
+          <div style="display:flex;justify-content:space-between;"><span style="font-size:7px;color:#888;">Chief complaint</span><span style="font-size:7px;color:#5B1180;">Chest pain on exertion</span></div>
+          <div style="display:flex;justify-content:space-between;"><span style="font-size:7px;color:#888;">Duration</span><span style="font-size:7px;color:#5B1180;">Intermittent · &lt;2 min</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mk-label">AI transcription · EHR auto-fill · EMIAS</div>
+
+</div>
         <div class="case-card__tech">
           <p class="case-card__section-label">Technology</p>
           <div class="tech-tags"><span class="tech-tag">YandexGPT</span><span class="tech-tag">SpeechKit STT</span><span class="tech-tag">Medical Record Auto-fill</span></div>
         </div>
       </div>
-
-            <div class="case-card fade-in" data-stream="MedTech" style="transition-delay:.15s">
+      <div class="case-card fade-in" data-stream="MedTech" style="transition-delay:0.1s">
         <div class="case-card__header">
           <div class="case-card__badges">
             <span class="badge badge--medtech">MedTech</span>
-            <span class="badge badge--market">Russia · Federal</span>
-          </div>
-          <h3 class="case-card__title">Federal Ministry of Health — Smart Search</h3>
-          <p class="case-card__client">Federal Ministry of Health · Russia</p>
-        </div>
-        <div class="case-card__body">
-          <div>
-            <p class="case-card__section-label">Challenge</p>
-            <p class="case-card__text">Citizens unable to obtain official, structured information about Ministry services across ~150 subordinate organisations; reliance on generic search engines only.</p>
-          </div>
-          <div>
-            <p class="case-card__section-label">Solution</p>
-            <p class="case-card__text">Smart semantic search deployed across all Ministry of Health domains and subordinate institution portals, enabling citizens to find structured official information in natural language.</p>
-          </div>
-          <div class="case-card__metrics">
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Increased citizen NPS</span></div>
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Increased MAU across Ministry portals</span></div>
-          </div>
-        </div>
-        <div class="case-card__tech">
-          <p class="case-card__section-label">Technology</p>
-          <div class="tech-tags"><span class="tech-tag">Semantic Search Engine</span><span class="tech-tag">YandexGPT</span><span class="tech-tag">Cross-domain Indexing</span><span class="tech-tag">NLP</span></div>
-        </div>
-      </div>
-
-      <!-- No-results placeholder -->
-      <div class="case-card fade-in" data-stream="MedTech" style="transition-delay:.2s">
-        <div class="case-card__header">
-          <div class="case-card__badges">
-            <span class="badge badge--medtech">MedTech</span>
-            <span class="badge badge--market">Russia · Moscow</span>
+            <span class="badge badge--market">Russia - Moscow</span>
           </div>
           <h3 class="case-card__title">Citywide Healthcare Digital Platform</h3>
-          <p class="case-card__client">City Healthcare Authority · Moscow, Russia</p>
+          <p class="case-card__client">City Healthcare Authority - Moscow, Russia</p>
         </div>
         <div class="case-card__body">
           <div>
             <p class="case-card__section-label">Challenge</p>
-            <p class="case-card__text">Fragmented hospital management systems, disconnected patient data across public and private health programmes, and insufficient digital infrastructure at clinic level.</p>
+            <p class="case-card__text">Fragmented hospital management systems, disconnected patient data across public and private health programmes.</p>
           </div>
           <div>
             <p class="case-card__section-label">Solution</p>
-            <p class="case-card__text">Integrated digital health platform: citywide doctor appointment e-booking, electronic health records (EHR), AI appointment transcription, AI aggregated health history assistant, and ambulance live tracking.</p>
+            <p class="case-card__text">Integrated digital health platform: citywide doctor appointment e-booking, EHR, AI appointment transcription, AI aggregated health history assistant, ambulance live tracking.</p>
           </div>
-          <div class="case-card__metrics">
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Booking unavailability reduced from 35% to 2%</span></div>
-            <div class="metric-item"><span class="metric-dot"></span><span class="metric-text">40,000 doctor-hours saved monthly via online rescheduling</span></div>
-          </div>
+          <div class="case-card__metrics"><div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Booking unavailability reduced from 35% to 2%</span></div>
+<div class="metric-item"><span class="metric-dot"></span><span class="metric-text">40,000 doctor-hours saved monthly via online rescheduling</span></div></div>
         </div>
+        <div class="mockup-wrap">
+<div class="mk-phone">
+  <div class="mk-phone-bar"><div class="mk-phone-dot"></div><div class="mk-phone-notch"></div></div>
+  <div class="mk-screen">
+    <div style="background:#5B1180;padding:6px 8px;display:flex;align-items:center;justify-content:space-between;">
+      <span style="font-size:8px;color:#fff;font-weight:700;">🏥 City Health Portal</span>
+      <span style="font-size:6.5px;color:rgba(255,255,255,.6);">Moscow</span>
+    </div>
+    <div style="padding:5px 7px;background:#fff;border-bottom:1px solid #eee;">
+      <div style="background:#f5f3ff;border-radius:6px;padding:4px 8px;font-size:7.5px;color:#888;">🔍 Find a doctor or clinic…</div>
+    </div>
+    <div style="padding:6px 7px;display:flex;flex-direction:column;gap:4px;background:#fafafa;height:125px;overflow:hidden;">
+      <div style="background:#fff;border-radius:7px;padding:5px 8px;border-left:3px solid #5B1180;">
+        <div style="font-size:7.5px;font-weight:700;color:#141414;">Next appointment</div>
+        <div style="font-size:7px;color:#555;margin-top:1px;">Dr. Sokolova · Cardiology</div>
+        <div style="font-size:7px;color:#5B1180;font-weight:600;">Wed 19 Mar · 10:30 AM</div>
+        <div style="display:flex;gap:3px;margin-top:4px;">
+          <span style="font-size:6.5px;background:#5B1180;color:#fff;padding:1px 6px;border-radius:4px;">Reschedule</span>
+          <span style="font-size:6.5px;background:#f5f3ff;color:#5B1180;padding:1px 6px;border-radius:4px;">Get directions</span>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;">
+        <div style="background:#fff;border-radius:6px;padding:5px 4px;text-align:center;"><div style="font-size:13px;">🩺</div><div style="font-size:6px;color:#333;margin-top:1px;">Book Visit</div></div>
+        <div style="background:#fff;border-radius:6px;padding:5px 4px;text-align:center;"><div style="font-size:13px;">💊</div><div style="font-size:6px;color:#333;margin-top:1px;">Prescriptions</div></div>
+        <div style="background:#5B1180;border-radius:6px;padding:5px 4px;text-align:center;"><div style="font-size:13px;">🚑</div><div style="font-size:6px;color:#fff;margin-top:1px;">Ambulance</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mk-label">City health portal · 40K dr-hours saved/mo</div>
+
+</div>
         <div class="case-card__tech">
           <p class="case-card__section-label">Technology</p>
           <div class="tech-tags"><span class="tech-tag">Healthcare Portal</span><span class="tech-tag">EHR</span><span class="tech-tag">YandexGPT</span><span class="tech-tag">SpeechKit STT</span><span class="tech-tag">Ambulance GPS Tracking</span></div>
         </div>
       </div>
-
-      <div class="no-results hidden" id="no-results">
-        <p>No case studies found for this stream.</p>
+      <div class="case-card fade-in" data-stream="MedTech" style="transition-delay:0.15s">
+        <div class="case-card__header">
+          <div class="case-card__badges">
+            <span class="badge badge--medtech">MedTech</span>
+            <span class="badge badge--market">Russia - Federal</span>
+          </div>
+          <h3 class="case-card__title">Federal Ministry of Health - Smart Search</h3>
+          <p class="case-card__client">Federal Ministry of Health - Russia</p>
+        </div>
+        <div class="case-card__body">
+          <div>
+            <p class="case-card__section-label">Challenge</p>
+            <p class="case-card__text">Citizens unable to obtain official structured information about Ministry services across ~150 subordinate organisations.</p>
+          </div>
+          <div>
+            <p class="case-card__section-label">Solution</p>
+            <p class="case-card__text">Smart semantic search deployed across all Ministry of Health domains and subordinate institution portals, enabling citizens to find structured official information in natural language.</p>
+          </div>
+          <div class="case-card__metrics"><div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Increased citizen NPS</span></div>
+<div class="metric-item"><span class="metric-dot"></span><span class="metric-text">Increased MAU across Ministry portals</span></div></div>
+        </div>
+        <div class="mockup-wrap">
+<div class="mk-tablet">
+  <div class="mk-screen">
+    <div class="mk-header" style="background:#5B1180;">
+      <span class="mk-header-title">MoH Smart Search</span>
+      <span class="mk-status-dot"></span>
+    </div>
+    <div style="padding:6px 8px;background:#fafafa;height:155px;overflow:hidden;display:flex;flex-direction:column;gap:4px;">
+      <div style="background:#fff;border-radius:7px;padding:5px 8px;display:flex;gap:5px;align-items:center;box-shadow:0 1px 4px rgba(91,17,128,.1);">
+        <span style="font-size:10px;">🔍</span>
+        <span style="font-size:7.5px;color:#555;flex:1;">clinical management of sepsis in ICU</span>
+        <span style="font-size:6.5px;background:#5B1180;color:#fff;padding:1px 6px;border-radius:4px;">Search</span>
       </div>
+      <div style="font-size:6.5px;color:#888;padding:0 2px;">3 results · semantic match</div>
+      <div style="display:flex;flex-direction:column;gap:3px;flex:1;overflow:hidden;">
+        <div style="background:#fff;border-radius:6px;padding:5px 8px;border-left:3px solid #5B1180;">
+          <div style="font-size:8px;font-weight:700;color:#141414;">Sepsis Management Protocol 2024</div>
+          <div style="font-size:7px;color:#888;">MoH Order #438 · ICU standards</div>
+          <div style="font-size:7px;color:#555;margin-top:2px;line-height:1.4;">…<span style="background:#ede9fe;padding:0 2px;border-radius:2px;">early vasopressor initiation</span> within 1 hr of shock…</div>
+        </div>
+        <div style="background:#f5f3ff;border-radius:6px;padding:5px 8px;border-left:3px solid rgba(91,17,128,.3);">
+          <div style="font-size:8px;font-weight:700;color:#141414;">Antibiotic Stewardship Guidelines</div>
+          <div style="font-size:7px;color:#888;">MoH Clinical Advisory 2023</div>
+        </div>
+      </div>
+      <div style="background:#5B1180;border-radius:6px;padding:4px 8px;text-align:center;">
+        <span style="font-size:7px;color:#fff;font-weight:600;">Download Clinical Protocol →</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mk-label">MoH semantic search · federal health system</div>
 
-    </div><!-- /cases-grid -->
-  </div><!-- /container -->
+</div>
+        <div class="case-card__tech">
+          <p class="case-card__section-label">Technology</p>
+          <div class="tech-tags"><span class="tech-tag">Semantic Search Engine</span><span class="tech-tag">YandexGPT</span><span class="tech-tag">Cross-domain Indexing</span><span class="tech-tag">NLP</span></div>
+        </div>
+      </div>
+      <div class="no-results hidden" id="no-results"><p>No case studies found for this stream.</p></div>
+    </div>
+  </div>
 </div>
 
-<!-- ══ CTA BANNER ════════════════════════════════════════════════════════ -->
 <section id="contact" style="background:#000;padding:6rem 0;color:var(--text-on-dark);">
   <div class="container" style="text-align:center;">
     <p class="label" style="color:var(--primary);margin-bottom:1.5rem;">Get in touch</p>
-    <h2 class="yt-h2" style="max-width:36rem;margin:0 auto 1.5rem;">Ready to see what's possible?</h2>
-    <p style="font-size:.95rem;letter-spacing:.05em;opacity:.6;max-width:32rem;margin:0 auto 3rem;line-height:1.6;">Let's explore how Yango Tech solutions can be tailored to your market and organisation.</p>
+    <h2 class="yt-h2" style="max-width:36rem;margin:0 auto 1.5rem;">Ready to see what&rsquo;s possible?</h2>
+    <p style="font-size:.95rem;letter-spacing:.05em;opacity:.6;max-width:32rem;margin:0 auto 3rem;line-height:1.6;">Let&rsquo;s explore how Yango Tech solutions can be tailored to your market and organisation.</p>
     <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
       <a href="https://tech.yango.com" class="btn btn--primary" target="_blank">Explore Yango Tech</a>
       <button class="btn btn--dark" onclick="openModal()">Talk to an expert</button>
@@ -1277,7 +2155,7 @@
           <p class="footer__col-title">Contact</p>
           <ul class="footer__links">
             <li><a href="https://tech.yango.com" target="_blank">tech.yango.com</a></li>
-            <li><a href="mailto:ramya@yango.com">ramya@yango.com</a></li>
+            <li><a href="/cdn-cgi/l/email-protection#dcaebdb1a5bd9ca5bdb2bbb3f2bfb3b1"><span class="__cf_email__" data-cfemail="f280939f8b93b28b939c959ddc919d9f">[email&#160;protected]</span></a></li>
           </ul>
         </div>
       </div>
@@ -1288,7 +2166,7 @@
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // ── NAV scroll behaviour ──────────────────────────────────────────────
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
@@ -1339,6 +2217,8 @@
   });
 
 </script>
+
+
 
 <!-- ══ CONTACT MODAL ═════════════════════════════════════════════════════ -->
 <div id="contact-modal" style="
@@ -1467,7 +2347,68 @@
     document.getElementById('expert-form').style.display = 'none';
     document.getElementById('form-success').style.display = 'block';
   }
+
 </script>
 
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 80); });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.06 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  const cards = Array.from(document.querySelectorAll('.case-card[data-stream]'));
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const countLabel = document.getElementById('count-label');
+  const noResults = document.getElementById('no-results');
+
+  function filterStream(stream) {
+    filterBtns.forEach(btn => {
+      const s = btn.dataset.stream;
+      btn.classList.toggle('active', s === stream || (stream === 'all' && s === 'all'));
+    });
+    let visible = 0;
+    cards.forEach(card => {
+      const match = stream === 'all' || card.dataset.stream === stream;
+      card.classList.toggle('hidden', !match);
+      if (match) visible++;
+    });
+    noResults.classList.toggle('hidden', visible > 0);
+    countLabel.textContent = 'Showing ' + visible + ' of ' + cards.length;
+    document.getElementById('cases').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  filterBtns.forEach(btn => { btn.addEventListener('click', () => filterStream(btn.dataset.stream)); });
+
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+
+  // Tab switching in fintech mockup headers
+  document.querySelectorAll('.mk-htab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      tab.parentElement.querySelectorAll('.mk-htab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+    });
+  });
+
+  // Pill hover in e-gov mockups
+  document.querySelectorAll('.mk-pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      const chatArea = pill.closest('.mk-screen').querySelector('.mk-chat-area');
+      if (chatArea) {
+        const msg = document.createElement('div');
+        msg.className = 'mk-msg mk-msg--user';
+        msg.textContent = pill.textContent;
+        chatArea.appendChild(msg);
+        chatArea.scrollTop = chatArea.scrollHeight;
+      }
+    });
+  });
+</script>
 </body>
 </html>
