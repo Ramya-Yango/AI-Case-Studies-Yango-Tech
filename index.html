@@ -86,11 +86,17 @@
     .cases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;padding-top:3rem;padding-bottom:6rem;}
     @media(max-width:1100px){.cases-grid{grid-template-columns:repeat(2,1fr);}}
     @media(max-width:640px){.cases-grid{grid-template-columns:1fr;}}
+    @media(max-width:900px){
+      .footer-grid{grid-template-columns:1fr 1fr !important;}
+    }
+    @media(max-width:580px){
+      .footer-grid{grid-template-columns:1fr !important;}
+    }
 
     /* CASE CARD */
-    .case-card{background:#fff;border-radius:var(--r-card);overflow:hidden;display:flex;flex-direction:column;transition:transform var(--t-fast),box-shadow var(--t-fast);}
+    .case-card{background:#fff;border-radius:var(--r-card);overflow:hidden;display:grid;grid-template-rows:auto 1fr auto auto auto;transition:transform var(--t-fast),box-shadow var(--t-fast);}
     .case-card:hover{transform:translateY(-4px);}
-    .case-card__header{padding:1.75rem 1.75rem 1.25rem;border-bottom:1px solid var(--border);}
+    .case-card__header{padding:1.5rem 1.75rem 1.1rem;border-bottom:1px solid var(--border);min-height:9rem;display:flex;flex-direction:column;}
     .case-card__badges{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem;}
     .badge{display:inline-block;padding:.35rem .85rem;border-radius:var(--r-pill);font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#fff;}
     .badge--egov{background:var(--egov);}
@@ -100,14 +106,16 @@
     .badge--market{background:var(--surface-dark);font-weight:400;}
     .case-card__title{font-family:var(--font-head);font-weight:900;font-size:clamp(.9rem,1.1vw,1.1rem);line-height:1.15;letter-spacing:calc(1em/50);text-transform:uppercase;margin-bottom:.5rem;}
     .case-card__client{font-size:.72rem;font-weight:500;color:var(--text-sec);letter-spacing:.05em;}
-    .case-card__body{padding:1.25rem 1.75rem;flex:1;display:flex;flex-direction:column;gap:1rem;}
+    .case-card__body{padding:1.1rem 1.75rem 1rem;display:flex;flex-direction:column;gap:.85rem;}
     .case-card__section-label{font-size:.65rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text-sec);margin-bottom:.3rem;}
     .case-card__text{font-size:.78rem;line-height:1.55;letter-spacing:.03em;color:var(--text);}
-    .case-card__metrics{margin-top:auto;padding-top:1rem;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:.45rem;}
+    .case-card__challenge{min-height:4.2rem;max-height:4.2rem;overflow:hidden;}
+    .case-card__solution{min-height:4.8rem;max-height:4.8rem;overflow:hidden;}
+    .case-card__metrics{padding:1rem 1.75rem;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:.45rem;min-height:6.5rem;}
     .metric-item{display:flex;align-items:flex-start;gap:.65rem;}
     .metric-dot{width:.4rem;height:.4rem;border-radius:50%;background:var(--primary);flex-shrink:0;margin-top:.35rem;}
     .metric-text{font-size:.73rem;line-height:1.5;letter-spacing:.03em;font-weight:500;}
-    .case-card__tech{padding:.65rem 1.75rem 1.25rem;border-top:1px solid var(--border);}
+    .case-card__tech{padding:.75rem 1.75rem 1rem;border-top:1px solid var(--border);min-height:3.75rem;}
     .tech-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.35rem;}
     .tech-tag{font-size:.6rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;padding:.22rem .6rem;background:var(--body-bg);border-radius:.5rem;color:var(--text-sec);}
 
@@ -532,11 +540,11 @@
           <p class="case-card__client">Moscow Dept. of Information Technology (DIT)</p>
         </div>
         <div class="case-card__body">
-          <div>
+          <div class="case-card__challenge">
             <p class="case-card__section-label">Challenge</p>
             <p class="case-card__text">Overloaded call centers and fragmented portals made it difficult for citizens to access services.</p>
           </div>
-          <div>
+          <div class="case-card__solution">
             <p class="case-card__section-label">Solution</p>
             <p class="case-card__text">Unified AI assistant embedded across all Moscow city websites providing public service information, status updates, and free-form conversation support.</p>
           </div>
@@ -588,11 +596,11 @@
           <p class="case-card__client">Moscow Dept. of Information Technology (DIT)</p>
         </div>
         <div class="case-card__body">
-          <div>
+          <div class="case-card__challenge">
             <p class="case-card__section-label">Challenge</p>
             <p class="case-card__text">Government-business interaction was digitized but fragmented, with complex regulatory documentation creating friction.</p>
           </div>
-          <div>
+          <div class="case-card__solution">
             <p class="case-card__section-label">Solution</p>
             <p class="case-card__text">Digital assistant deployed across business portals providing service information, status updates, and ordering of public services via natural language.</p>
           </div>
@@ -655,11 +663,11 @@
           <p class="case-card__client">Moscow Dept. of Information Technology (DIT)</p>
         </div>
         <div class="case-card__body">
-          <div>
+          <div class="case-card__challenge">
             <p class="case-card__section-label">Challenge</p>
             <p class="case-card__text">Agency heads lacked time to configure BI dashboards and retrieve operational summaries.</p>
           </div>
-          <div>
+          <div class="case-card__solution">
             <p class="case-card__section-label">Solution</p>
             <p class="case-card__text">Digital assistant integrated with task-tracking and BI systems for task assignment and real-time status updates via natural language.</p>
           </div>
@@ -709,7 +717,8 @@
 </div>
 <div class="mk-label">AI executive dashboard · 75% faster reporting</div>
 
-</div>
+
+          <div class="metric-item"><span class="metric-dot" style="opacity:0;"></span><span class="metric-text" style="opacity:0;">—</span></div></div>
         <div class="case-card__tech">
           <p class="case-card__section-label">Technology</p>
           <div class="tech-tags"><span class="tech-tag">YandexGPT</span><span class="tech-tag">BI Integration</span><span class="tech-tag">NL to BI Query</span></div>
@@ -726,11 +735,11 @@
           <p class="case-card__client">Moscow Dept. of Information Technology (DIT)</p>
         </div>
         <div class="case-card__body">
-          <div>
+          <div class="case-card__challenge">
             <p class="case-card__section-label">Challenge</p>
             <p class="case-card__text">Manual comparison of government documents against regulatory standards required significant staffing and processing time.</p>
           </div>
-          <div>
+          <div class="case-card__solution">
             <p class="case-card__section-label">Solution</p>
             <p class="case-card__text">AI expert system that automatically highlights inconsistencies between submitted documents and approved regulatory standards.</p>
           </div>
@@ -773,7 +782,8 @@
 </div>
 <div class="mk-label">AI doc compliance · 90% error catch rate</div>
 
-</div>
+
+          <div class="metric-item"><span class="metric-dot" style="opacity:0;"></span><span class="metric-text" style="opacity:0;">—</span></div></div>
         <div class="case-card__tech">
           <p class="case-card__section-label">Technology</p>
           <div class="tech-tags"><span class="tech-tag">YandexGPT</span><span class="tech-tag">Document Ingestion</span><span class="tech-tag">Regulatory NLP</span></div>
@@ -790,11 +800,11 @@
           <p class="case-card__client">Government Service Provider - KSA</p>
         </div>
         <div class="case-card__body">
-          <div>
+          <div class="case-card__challenge">
             <p class="case-card__section-label">Challenge</p>
             <p class="case-card__text">Data analysts spent hundreds of hours monthly analysing citizen inquiry patterns; complex SQL required specialist skills.</p>
           </div>
-          <div>
+          <div class="case-card__solution">
             <p class="case-card__section-label">Solution</p>
             <p class="case-card__text">GenAI agent over internal Data Mart / DWH with LLM natural language interface for querying, analysis, and auto-generated insights without SQL.</p>
           </div>
@@ -844,7 +854,8 @@
 </div>
 <div class="mk-label">AI KPI analytics · Saudi government</div>
 
-</div>
+
+          <div class="metric-item"><span class="metric-dot" style="opacity:0;"></span><span class="metric-text" style="opacity:0;">—</span></div></div>
         <div class="case-card__tech">
           <p class="case-card__section-label">Technology</p>
           <div class="tech-tags"><span class="tech-tag">GenAI Agent</span><span class="tech-tag">LLM</span><span class="tech-tag">Data Mart / DWH</span><span class="tech-tag">NL to SQL</span></div>
@@ -861,11 +872,11 @@
           <p class="case-card__client">City Government - Moscow, Russia</p>
         </div>
         <div class="case-card__body">
-          <div>
+          <div class="case-card__challenge">
             <p class="case-card__section-label">Challenge</p>
             <p class="case-card__text">Fragmented, paper-heavy public service delivery with limited interoperability between municipal departments.</p>
           </div>
-          <div>
+          <div class="case-card__solution">
             <p class="case-card__section-label">Solution</p>
             <p class="case-card__text">Integrated portal delivering 420+ services digitally; AI-powered chatbot for G2C/G2B inquiries; AI reporting assistant; smart semantic search.</p>
           </div>
@@ -929,11 +940,11 @@ data-stream="FinTech / Banking" style="transition-delay:0.05s">
           <p class="case-card__client">Raiffeisenbank</p>
         </div>
         <div class="case-card__body">
-          <div>
+          <div class="case-card__challenge">
             <p class="case-card__section-label">Challenge</p>
             <p class="case-card__text">High call-center load, poor customer experience on routine inquiries, and high cost per handled inbound call.</p>
           </div>
-          <div>
+          <div class="case-card__solution">
             <p class="case-card__section-label">Solution</p>
             <p class="case-card__text">AI voice assistant built on Yandex SpeechKit that recognises customer questions, processes requests across multiple topics, and provides immediate answers.</p>
           </div>
@@ -987,11 +998,11 @@ data-stream="FinTech / Banking" style="transition-delay:0.05s">
           <p class="case-card__client">Banking Sector Client</p>
         </div>
         <div class="case-card__body">
-          <div>
+          <div class="case-card__challenge">
             <p class="case-card__section-label">Challenge</p>
             <p class="case-card__text">Manual audit covered only a small share of calls, making service quality analysis difficult and inconsistent.</p>
           </div>
-          <div>
+          <div class="case-card__solution">
             <p class="case-card__section-label">Solution</p>
             <p class="case-card__text">Automated dialogue-quality assessment tool built on Yandex SpeechSense that evaluates 100% of recorded customer conversations.</p>
           </div>
@@ -1044,7 +1055,8 @@ data-stream="FinTech / Banking" style="transition-delay:0.05s">
 </div>
 <div class="mk-label">AI call QA · 100% dialogue coverage</div>
 
-</div>
+
+          <div class="metric-item"><span class="metric-dot" style="opacity:0;"></span><span class="metric-text" style="opacity:0;">—</span></div></div>
         <div class="case-card__tech">
           <p class="case-card__section-label">Technology</p>
           <div class="tech-tags"><span class="tech-tag">Yandex SpeechSense</span><span class="tech-tag">STT</span><span class="tech-tag">NLP Quality Scoring</span></div>
@@ -1060,11 +1072,11 @@ data-stream="FinTech / Banking" style="transition-delay:0.05s">
           <p class="case-card__client">Banking Sector Client</p>
         </div>
         <div class="case-card__body">
-          <div>
+          <div class="case-card__challenge">
             <p class="case-card__section-label">Challenge</p>
             <p class="case-card__text">High call-center load; complex operator onboarding; staff needed faster access to internal knowledge during live calls.</p>
           </div>
-          <div>
+          <div class="case-card__solution">
             <p class="case-card__section-label">Solution</p>
             <p class="case-card__text">Yandex SupportGPT fine-tuned on client's internal knowledge base and historical data, deployed as a live agent assistant alongside operators.</p>
           </div>
@@ -1106,7 +1118,8 @@ data-stream="FinTech / Banking" style="transition-delay:0.05s">
 </div>
 <div class="mk-label">AI agent sidebar · 3× faster resolution</div>
 
-</div>
+
+          <div class="metric-item"><span class="metric-dot" style="opacity:0;"></span><span class="metric-text" style="opacity:0;">—</span></div></div>
         <div class="case-card__tech">
           <p class="case-card__section-label">Technology</p>
           <div class="tech-tags"><span class="tech-tag">Yandex SupportGPT</span><span class="tech-tag">Fine-tuned LLM</span><span class="tech-tag">Knowledge Base RAG</span></div>
@@ -1122,11 +1135,11 @@ data-stream="FinTech / Banking" style="transition-delay:0.05s">
           <p class="case-card__client">Banking Sector Client</p>
         </div>
         <div class="case-card__body">
-          <div>
+          <div class="case-card__challenge">
             <p class="case-card__section-label">Challenge</p>
             <p class="case-card__text">Low conversion rates, difficult product discovery, and poor overall user experience in the bank's digital app.</p>
           </div>
-          <div>
+          <div class="case-card__solution">
             <p class="case-card__section-label">Solution</p>
             <p class="case-card__text">Intelligent search engine using a generative answer model. Users ask in natural language and receive conversational answers with links to products.</p>
           </div>
@@ -1168,7 +1181,8 @@ data-stream="FinTech / Banking" style="transition-delay:0.05s">
 </div>
 <div class="mk-label">AI semantic search · intent-aware</div>
 
-</div>
+
+          <div class="metric-item"><span class="metric-dot" style="opacity:0;"></span><span class="metric-text" style="opacity:0;">—</span></div></div>
         <div class="case-card__tech">
           <p class="case-card__section-label">Technology</p>
           <div class="tech-tags"><span class="tech-tag">Yandex Search API</span><span class="tech-tag">Generative Answer Model</span><span class="tech-tag">NLP</span></div>
@@ -1184,11 +1198,11 @@ data-stream="FinTech / Banking" style="transition-delay:0.05s">
           <p class="case-card__client">Banking Sector Client</p>
         </div>
         <div class="case-card__body">
-          <div>
+          <div class="case-card__challenge">
             <p class="case-card__section-label">Challenge</p>
             <p class="case-card__text">Slow document processing for client approvals, high time-to-decision, and inconsistent document formats.</p>
           </div>
-          <div>
+          <div class="case-card__solution">
             <p class="case-card__section-label">Solution</p>
             <p class="case-card__text">YandexGPT deployed to recognise photos of documents, extract required information, and process requests automatically.</p>
           </div>
@@ -1240,7 +1254,8 @@ data-stream="FinTech / Banking" style="transition-delay:0.05s">
 </div>
 <div class="mk-label">AI doc analysis · 60% faster approvals</div>
 
-</div>
+
+          <div class="metric-item"><span class="metric-dot" style="opacity:0;"></span><span class="metric-text" style="opacity:0;">—</span></div></div>
         <div class="case-card__tech">
           <p class="case-card__section-label">Technology</p>
           <div class="tech-tags"><span class="tech-tag">YandexGPT</span><span class="tech-tag">Document OCR & Vision</span><span class="tech-tag">Information Extraction</span></div>
@@ -1256,11 +1271,11 @@ data-stream="FinTech / Banking" style="transition-delay:0.05s">
           <p class="case-card__client">Large Credit Bureau - UAE / KSA</p>
         </div>
         <div class="case-card__body">
-          <div>
+          <div class="case-card__challenge">
             <p class="case-card__section-label">Challenge</p>
             <p class="case-card__text">Tens of thousands of monthly inbound calls; manual audit covered only a small share; bureau required policy compliance verification.</p>
           </div>
-          <div>
+          <div class="case-card__solution">
             <p class="case-card__section-label">Solution</p>
             <p class="case-card__text">Dual-language (Arabic & English) STT + diarization model + Claude Sonnet for automated verification of call transcript compliance.</p>
           </div>
@@ -1320,11 +1335,11 @@ data-stream="FinTech / Banking" style="transition-delay:0.05s">
           <p class="case-card__client">Insurance Company - Central Asia</p>
         </div>
         <div class="case-card__body">
-          <div>
+          <div class="case-card__challenge">
             <p class="case-card__section-label">Challenge</p>
             <p class="case-card__text">Actuary experts manually processed tens of thousands of reinsurance applications monthly; process relied on key experts.</p>
           </div>
-          <div>
+          <div class="case-card__solution">
             <p class="case-card__section-label">Solution</p>
             <p class="case-card__text">Email system integration + multi-format document ingestion + on-premise open-source LLM for rule application and automated risk assessment.</p>
           </div>
@@ -1381,11 +1396,11 @@ data-stream="FinTech / Banking" style="transition-delay:0.05s">
           <p class="case-card__client">Large Bank - Qatar</p>
         </div>
         <div class="case-card__body">
-          <div>
+          <div class="case-card__challenge">
             <p class="case-card__section-label">Challenge</p>
             <p class="case-card__text">C-suite required comprehensive daily market intelligence; analysts spent 3-4 hours manually compiling from 50+ sources.</p>
           </div>
-          <div>
+          <div class="case-card__solution">
             <p class="case-card__section-label">Solution</p>
             <p class="case-card__text">Multi-source web scraping engine + financial data API integration + LLM-powered sentiment analysis + automated executive summary generation.</p>
           </div>
@@ -1421,7 +1436,9 @@ data-stream="FinTech / Banking" style="transition-delay:0.05s">
 </div>
 <div class="mk-label">AI executive brief · Qatar bank</div>
 
-</div>
+
+          <div class="metric-item"><span class="metric-dot" style="opacity:0;"></span><span class="metric-text" style="opacity:0;">—</span></div>
+          <div class="metric-item"><span class="metric-dot" style="opacity:0;"></span><span class="metric-text" style="opacity:0;">—</span></div></div>
         <div class="case-card__tech">
           <p class="case-card__section-label">Technology</p>
           <div class="tech-tags"><span class="tech-tag">Web Scraping Engine</span><span class="tech-tag">Financial Data APIs</span><span class="tech-tag">LLM Sentiment Analysis</span></div>
@@ -1437,11 +1454,11 @@ data-stream="FinTech / Banking" style="transition-delay:0.05s">
           <p class="case-card__client">Large Regional Bank</p>
         </div>
         <div class="case-card__body">
-          <div>
+          <div class="case-card__challenge">
             <p class="case-card__section-label">Challenge</p>
             <p class="case-card__text">Slow decision-making due to manual analytics; low BI tool adoption by sales-focused staff; no unified view of client data.</p>
           </div>
-          <div>
+          <div class="case-card__solution">
             <p class="case-card__section-label">Solution</p>
             <p class="case-card__text">Universal AI assistant with natural language interface (NL to SQL) integrated into CRM; automates personalised client insights and self-service analytics.</p>
           </div>
@@ -1506,11 +1523,11 @@ data-stream="MaaS" style="transition-delay:0.05s">
           <p class="case-card__client">City Government / Transport Authority - Yerevan</p>
         </div>
         <div class="case-card__body">
-          <div>
+          <div class="case-card__challenge">
             <p class="case-card__section-label">Challenge</p>
             <p class="case-card__text">Low public transport speed (10-15 km/h), poor route coverage, high fare evasion, and limited data-driven decision-making.</p>
           </div>
-          <div>
+          <div class="case-card__solution">
             <p class="case-card__section-label">Solution</p>
             <p class="case-card__text">End-to-end platform covering analytics, dispatching, on-board bus equipment, and inspector route planning based on fare payment and passenger flow data.</p>
           </div>
@@ -1569,11 +1586,11 @@ data-stream="MaaS" style="transition-delay:0.05s">
           <p class="case-card__client">City Government / Transport Authority - Yaroslavl</p>
         </div>
         <div class="case-card__body">
-          <div>
+          <div class="case-card__challenge">
             <p class="case-card__section-label">Challenge</p>
             <p class="case-card__text">Inefficient vehicle class matching, poor service intervals, underutilised vehicles, and sub-optimal route lengths.</p>
           </div>
-          <div>
+          <div class="case-card__solution">
             <p class="case-card__section-label">Solution</p>
             <p class="case-card__text">Data-driven schedule optimisation: vehicle class adjustment, interval changes, route extension/shortening, and reduction of underutilised vehicles.</p>
           </div>
@@ -1611,7 +1628,8 @@ data-stream="MaaS" style="transition-delay:0.05s">
 </div>
 <div class="mk-label">AI route optimiser · Yaroslavl transit</div>
 
-</div>
+
+          <div class="metric-item"><span class="metric-dot" style="opacity:0;"></span><span class="metric-text" style="opacity:0;">—</span></div></div>
         <div class="case-card__tech">
           <p class="case-card__section-label">Technology</p>
           <div class="tech-tags"><span class="tech-tag">Yango City Platform</span><span class="tech-tag">Schedule Optimisation Algorithm</span><span class="tech-tag">Yandex Maps</span></div>
@@ -1628,11 +1646,11 @@ data-stream="MaaS" style="transition-delay:0.05s">
           <p class="case-card__client">City Government / Transport Authority - Yaroslavl</p>
         </div>
         <div class="case-card__body">
-          <div>
+          <div class="case-card__challenge">
             <p class="case-card__section-label">Challenge</p>
             <p class="case-card__text">Above-average fare evasion in Frunzensky District; manual inspector deployment without data insight.</p>
           </div>
-          <div>
+          <div class="case-card__solution">
             <p class="case-card__section-label">Solution</p>
             <p class="case-card__text">Data-driven planning of inspector patrol routes based on fare payment data and passenger flow, precisely targeting high-evasion zones.</p>
           </div>
@@ -1675,7 +1693,8 @@ data-stream="MaaS" style="transition-delay:0.05s">
 </div>
 <div class="mk-label">AI inspector routing · evasion heatmap</div>
 
-</div>
+
+          <div class="metric-item"><span class="metric-dot" style="opacity:0;"></span><span class="metric-text" style="opacity:0;">—</span></div></div>
         <div class="case-card__tech">
           <p class="case-card__section-label">Technology</p>
           <div class="tech-tags"><span class="tech-tag">Fare Evasion Analytics</span><span class="tech-tag">Passenger Flow Data</span><span class="tech-tag">Inspector Routing Algorithm</span></div>
@@ -1692,11 +1711,11 @@ data-stream="MaaS" style="transition-delay:0.05s">
           <p class="case-card__client">City Transport Authority - Moscow, Russia</p>
         </div>
         <div class="case-card__body">
-          <div>
+          <div class="case-card__challenge">
             <p class="case-card__section-label">Challenge</p>
             <p class="case-card__text">Fragmented urban mobility systems, limited real-time fleet visibility, no unified management of transport dispatching, parking, and road assets.</p>
           </div>
-          <div>
+          <div class="case-card__solution">
             <p class="case-card__section-label">Solution</p>
             <p class="case-card__text">Multi-layer smart city platform: public transport dispatching with GPS tracking, fleet management, parking payment & ANPR, road marking management.</p>
           </div>
@@ -1758,11 +1777,11 @@ data-stream="MedTech" style="transition-delay:0.05s">
           <p class="case-card__client">Moscow Healthcare System (EMIAS)</p>
         </div>
         <div class="case-card__body">
-          <div>
+          <div class="case-card__challenge">
             <p class="case-card__section-label">Challenge</p>
             <p class="case-card__text">Doctors limited to 12-minute appointments; ~2 minutes wasted searching fragmented patient records across multiple interface tabs.</p>
           </div>
-          <div>
+          <div class="case-card__solution">
             <p class="case-card__section-label">Solution</p>
             <p class="case-card__text">GPT-based semantic search over patient medical records delivering answers in under 10 seconds, integrated within the EMIAS system.</p>
           </div>
@@ -1807,7 +1826,8 @@ data-stream="MedTech" style="transition-delay:0.05s">
 </div>
 <div class="mk-label">EMIAS EHR search · AI-assisted</div>
 
-</div>
+
+          <div class="metric-item"><span class="metric-dot" style="opacity:0;"></span><span class="metric-text" style="opacity:0;">—</span></div></div>
         <div class="case-card__tech">
           <p class="case-card__section-label">Technology</p>
           <div class="tech-tags"><span class="tech-tag">YandexGPT</span><span class="tech-tag">Semantic Search</span><span class="tech-tag">EMIAS Integration</span><span class="tech-tag">Medical NLP</span></div>
@@ -1823,11 +1843,11 @@ data-stream="MedTech" style="transition-delay:0.05s">
           <p class="case-card__client">Moscow Healthcare System (EMIAS)</p>
         </div>
         <div class="case-card__body">
-          <div>
+          <div class="case-card__challenge">
             <p class="case-card__section-label">Challenge</p>
             <p class="case-card__text">Doctors have no time during appointments to consult the full database of clinical guidelines.</p>
           </div>
-          <div>
+          <div class="case-card__solution">
             <p class="case-card__section-label">Solution</p>
             <p class="case-card__text">AI assistant trained on approved clinical guidelines and medical publications to support real-time diagnosis and recommendation during appointments.</p>
           </div>
@@ -1863,7 +1883,8 @@ data-stream="MedTech" style="transition-delay:0.05s">
 </div>
 <div class="mk-label">AI clinical guidelines · EMIAS expert</div>
 
-</div>
+
+          <div class="metric-item"><span class="metric-dot" style="opacity:0;"></span><span class="metric-text" style="opacity:0;">—</span></div></div>
         <div class="case-card__tech">
           <p class="case-card__section-label">Technology</p>
           <div class="tech-tags"><span class="tech-tag">YandexGPT Fine-tuned</span><span class="tech-tag">Clinical Knowledge Base</span><span class="tech-tag">RAG</span></div>
@@ -1879,11 +1900,11 @@ data-stream="MedTech" style="transition-delay:0.05s">
           <p class="case-card__client">Moscow Healthcare / Kazakhstan Health Insurance Fund</p>
         </div>
         <div class="case-card__body">
-          <div>
+          <div class="case-card__challenge">
             <p class="case-card__section-label">Challenge</p>
             <p class="case-card__text">Healthcare managers and insurers could not assess appointment quality except through patient feedback and retrospective error detection.</p>
           </div>
-          <div>
+          <div class="case-card__solution">
             <p class="case-card__section-label">Solution</p>
             <p class="case-card__text">AI system that automatically checks doctors recommendations and prescriptions against approved regulatory standards in near real time.</p>
           </div>
@@ -1922,7 +1943,9 @@ data-stream="MedTech" style="transition-delay:0.05s">
 </div>
 <div class="mk-label">AI audit · EMIAS + Kazakhstan health fund</div>
 
-</div>
+
+          <div class="metric-item"><span class="metric-dot" style="opacity:0;"></span><span class="metric-text" style="opacity:0;">—</span></div>
+          <div class="metric-item"><span class="metric-dot" style="opacity:0;"></span><span class="metric-text" style="opacity:0;">—</span></div></div>
         <div class="case-card__tech">
           <p class="case-card__section-label">Technology</p>
           <div class="tech-tags"><span class="tech-tag">YandexGPT</span><span class="tech-tag">Regulatory Standards NLP</span><span class="tech-tag">Automated Compliance Checker</span></div>
@@ -1938,11 +1961,11 @@ data-stream="MedTech" style="transition-delay:0.05s">
           <p class="case-card__client">Moscow Healthcare System (EMIAS)</p>
         </div>
         <div class="case-card__body">
-          <div>
+          <div class="case-card__challenge">
             <p class="case-card__section-label">Challenge</p>
             <p class="case-card__text">Doctors limited to 12-minute appointments; ~8 of those minutes spent manually filling out visit documentation.</p>
           </div>
-          <div>
+          <div class="case-card__solution">
             <p class="case-card__section-label">Solution</p>
             <p class="case-card__text">Microphone records the appointment; AI transcribes and summarises the conversation, then automatically fills out the medical record.</p>
           </div>
@@ -1992,7 +2015,8 @@ data-stream="MedTech" style="transition-delay:0.05s">
 </div>
 <div class="mk-label">AI transcription · EHR auto-fill · EMIAS</div>
 
-</div>
+
+          <div class="metric-item"><span class="metric-dot" style="opacity:0;"></span><span class="metric-text" style="opacity:0;">—</span></div></div>
         <div class="case-card__tech">
           <p class="case-card__section-label">Technology</p>
           <div class="tech-tags"><span class="tech-tag">YandexGPT</span><span class="tech-tag">SpeechKit STT</span><span class="tech-tag">Medical Record Auto-fill</span></div>
@@ -2008,11 +2032,11 @@ data-stream="MedTech" style="transition-delay:0.05s">
           <p class="case-card__client">City Healthcare Authority - Moscow, Russia</p>
         </div>
         <div class="case-card__body">
-          <div>
+          <div class="case-card__challenge">
             <p class="case-card__section-label">Challenge</p>
             <p class="case-card__text">Fragmented hospital management systems, disconnected patient data across public and private health programmes.</p>
           </div>
-          <div>
+          <div class="case-card__solution">
             <p class="case-card__section-label">Solution</p>
             <p class="case-card__text">Integrated digital health platform: citywide doctor appointment e-booking, EHR, AI appointment transcription, AI aggregated health history assistant, ambulance live tracking.</p>
           </div>
@@ -2050,7 +2074,8 @@ data-stream="MedTech" style="transition-delay:0.05s">
 </div>
 <div class="mk-label">City health portal · 40K dr-hours saved/mo</div>
 
-</div>
+
+          <div class="metric-item"><span class="metric-dot" style="opacity:0;"></span><span class="metric-text" style="opacity:0;">—</span></div></div>
         <div class="case-card__tech">
           <p class="case-card__section-label">Technology</p>
           <div class="tech-tags"><span class="tech-tag">Healthcare Portal</span><span class="tech-tag">EHR</span><span class="tech-tag">YandexGPT</span><span class="tech-tag">SpeechKit STT</span><span class="tech-tag">Ambulance GPS Tracking</span></div>
@@ -2066,11 +2091,11 @@ data-stream="MedTech" style="transition-delay:0.05s">
           <p class="case-card__client">Federal Ministry of Health - Russia</p>
         </div>
         <div class="case-card__body">
-          <div>
+          <div class="case-card__challenge">
             <p class="case-card__section-label">Challenge</p>
             <p class="case-card__text">Citizens unable to obtain official structured information about Ministry services across ~150 subordinate organisations.</p>
           </div>
-          <div>
+          <div class="case-card__solution">
             <p class="case-card__section-label">Solution</p>
             <p class="case-card__text">Smart semantic search deployed across all Ministry of Health domains and subordinate institution portals, enabling citizens to find structured official information in natural language.</p>
           </div>
@@ -2110,7 +2135,8 @@ data-stream="MedTech" style="transition-delay:0.05s">
 </div>
 <div class="mk-label">MoH semantic search · federal health system</div>
 
-</div>
+
+          <div class="metric-item"><span class="metric-dot" style="opacity:0;"></span><span class="metric-text" style="opacity:0;">—</span></div></div>
         <div class="case-card__tech">
           <p class="case-card__section-label">Technology</p>
           <div class="tech-tags"><span class="tech-tag">Semantic Search Engine</span><span class="tech-tag">YandexGPT</span><span class="tech-tag">Cross-domain Indexing</span><span class="tech-tag">NLP</span></div>
@@ -2121,7 +2147,7 @@ data-stream="MedTech" style="transition-delay:0.05s">
   </div>
 </div>
 
-<section id="contact" style="background:#000;padding:6rem 0;color:var(--text-on-dark);">
+<section id="contact" style="background:#000;padding:7rem 0 6rem;color:var(--text-on-dark);">
   <div class="container" style="text-align:center;">
     <p class="label" style="color:var(--primary);margin-bottom:1.5rem;">Get in touch</p>
     <h2 class="yt-h2" style="max-width:36rem;margin:0 auto 1.5rem;">Ready to see what&rsquo;s possible?</h2>
@@ -2134,39 +2160,69 @@ data-stream="MedTech" style="transition-delay:0.05s">
 </section>
 
 <!-- ══ FOOTER ════════════════════════════════════════════════════════════ -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer__top">
-      <a href="#">
-        <img src="https://avatars.mds.yandex.net/get-lpc/14837328/21641dca-3288-4eeb-8d99-81f8cb31a763/orig"
-             alt="Yango Tech" width="176" height="30" style="filter:invert(1);">
-      </a>
-      <div class="footer__cols">
-        <div>
-          <p class="footer__col-title">Streams</p>
-          <ul class="footer__links">
-            <li><a href="#" onclick="filterStream('e-Gov');return false;">e-Government</a></li>
-            <li><a href="#" onclick="filterStream('FinTech / Banking');return false;">FinTech &amp; Banking</a></li>
-            <li><a href="#" onclick="filterStream('MaaS');return false;">Mobility-as-a-Service</a></li>
-            <li><a href="#" onclick="filterStream('MedTech');return false;">MedTech</a></li>
-          </ul>
-        </div>
-        <div>
-          <p class="footer__col-title">Contact</p>
-          <ul class="footer__links">
-            <li><a href="https://tech.yango.com" target="_blank">tech.yango.com</a></li>
-            <li><a href="/cdn-cgi/l/email-protection#dcaebdb1a5bd9ca5bdb2bbb3f2bfb3b1"><span class="__cf_email__" data-cfemail="f280939f8b93b28b939c959ddc919d9f">[email&#160;protected]</span></a></li>
-          </ul>
-        </div>
+<footer style="background:#0a0a0a;padding:4rem 0 2rem;color:#f5f5f5;">
+  <div class="yt-container">
+
+    <!-- Top row: logo + nav columns -->
+    <div style="display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.08);">
+
+      <!-- Brand column -->
+      <div>
+        <a href="#" style="display:inline-block;margin-bottom:1.5rem;">
+          <img src="https://avatars.mds.yandex.net/get-lpc/14837328/21641dca-3288-4eeb-8d99-81f8cb31a763/orig"
+               alt="Yango Tech" height="28" style="width:auto;filter:invert(1);opacity:.9;">
+        </a>
+        <p style="font-size:.82rem;line-height:1.65;color:rgba(255,255,255,.45);letter-spacing:.03em;max-width:22rem;">
+          AI and digital infrastructure solutions for governments, banks, telcos and cities across 35+ countries.
+        </p>
       </div>
+
+      <!-- Streams -->
+      <div>
+        <p style="font-size:.62rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:1.1rem;">AI Streams</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:.65rem;">
+          <li><a href="#egov" onclick="filterStream('e-Gov');return false;" style="font-size:.82rem;color:rgba(255,255,255,.65);text-decoration:none;letter-spacing:.03em;transition:.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.65)'">e-Government</a></li>
+          <li><a href="#fintech" onclick="filterStream('FinTech / Banking');return false;" style="font-size:.82rem;color:rgba(255,255,255,.65);text-decoration:none;letter-spacing:.03em;transition:.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.65)'">FinTech &amp; Banking</a></li>
+          <li><a href="#maas" onclick="filterStream('MaaS');return false;" style="font-size:.82rem;color:rgba(255,255,255,.65);text-decoration:none;letter-spacing:.03em;transition:.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.65)'">Mobility-as-a-Service</a></li>
+          <li><a href="#medtech" onclick="filterStream('MedTech');return false;" style="font-size:.82rem;color:rgba(255,255,255,.65);text-decoration:none;letter-spacing:.03em;transition:.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.65)'">MedTech</a></li>
+        </ul>
+      </div>
+
+      <!-- Markets -->
+      <div>
+        <p style="font-size:.62rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:1.1rem;">Regions</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:.65rem;">
+          <li style="font-size:.82rem;color:rgba(255,255,255,.65);letter-spacing:.03em;">Africa · 12 Markets</li>
+          <li style="font-size:.82rem;color:rgba(255,255,255,.65);letter-spacing:.03em;">MENA &amp; Gulf</li>
+          <li style="font-size:.82rem;color:rgba(255,255,255,.65);letter-spacing:.03em;">CIS &amp; Europe</li>
+          <li style="font-size:.82rem;color:rgba(255,255,255,.65);letter-spacing:.03em;">Latin America &amp; Asia</li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <p style="font-size:.62rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:1.1rem;">Contact</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:.65rem;">
+          <li><a href="https://tech.yango.com" target="_blank" style="font-size:.82rem;color:rgba(255,255,255,.65);text-decoration:none;letter-spacing:.03em;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.65)'">tech.yango.com ↗</a></li>
+          <li><a href="mailto:ramya@yango.com" style="font-size:.82rem;color:#FF1A1A;text-decoration:none;letter-spacing:.03em;" onmouseover="this.style.color='#ff4444'" onmouseout="this.style.color='#FF1A1A'">ramya@yango.com</a></li>
+          <li style="margin-top:.5rem;">
+            <button onclick="openModal()" style="font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;background:#FF1A1A;color:#fff;border:none;border-radius:2rem;padding:.65rem 1.4rem;cursor:pointer;transition:.2s;" onmouseover="this.style.background='#cc0000'" onmouseout="this.style.background='#FF1A1A'">Talk to an Expert</button>
+          </li>
+        </ul>
+      </div>
+
     </div>
-    <div class="footer__bottom">
-      <span class="label" style="opacity:.4;">&copy; 2025 Yango Tech. All rights reserved.</span>
+
+    <!-- Bottom row -->
+    <div style="display:flex;justify-content:space-between;align-items:center;padding-top:1.75rem;flex-wrap:wrap;gap:1rem;">
+      <span style="font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.25);">&copy; 2025 Yango Tech. All rights reserved.</span>
+      <span style="font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.2);">25 AI Case Studies · 35+ Countries</span>
     </div>
+
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   // ── NAV scroll behaviour ──────────────────────────────────────────────
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
