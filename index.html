@@ -196,11 +196,11 @@
            alt="Yango Tech" width="176" height="30" style="filter:invert(1) sepia(1) saturate(5) hue-rotate(300deg) brightness(1.1);">
     </a>
     <ul class="nav__links">
-      <li><a class="nav__link" href="#cases">Case Studies</a></li>
-      <li><a class="nav__link" href="#egov">e-Gov</a></li>
-      <li><a class="nav__link" href="#fintech">FinTech</a></li>
-      <li><a class="nav__link" href="#maas">MaaS</a></li>
-      <li><a class="nav__link" href="#medtech">MedTech</a></li>
+      <li><a class="nav__link" href="#cases" onclick="filterStream('all');return true;">Case Studies</a></li>
+      <li><a class="nav__link" href="#cases" onclick="filterStream('e-Gov');return false;">e-Gov</a></li>
+      <li><a class="nav__link" href="#cases" onclick="filterStream('FinTech / Banking');return false;">FinTech</a></li>
+      <li><a class="nav__link" href="#cases" onclick="filterStream('MaaS');return false;">MaaS</a></li>
+      <li><a class="nav__link" href="#cases" onclick="filterStream('MedTech');return false;">MedTech</a></li>
       <li><button class="btn btn--dark" onclick="openModal()">Talk to an expert</button></li>
     </ul>
   </div>
@@ -260,15 +260,11 @@
         </p>
         <div style="display:flex;flex-wrap:wrap;gap:2.5rem;margin-top:2.5rem;padding-top:2.5rem;border-top:1px solid #eee;">
           <div>
-            <div style="font-family:'Yango Headline',Arial,sans-serif;font-weight:900;font-size:2.5rem;line-height:1;color:#FF1A1A;">$15B+</div>
-            <div class="label" style="color:#7A7A7A;margin-top:.4rem;">Group revenue 2024</div>
-          </div>
-          <div>
             <div style="font-family:'Yango Headline',Arial,sans-serif;font-weight:900;font-size:2.5rem;line-height:1;color:#FF1A1A;">100M+</div>
             <div class="label" style="color:#7A7A7A;margin-top:.4rem;">User base globally</div>
           </div>
           <div>
-            <div style="font-family:'Yango Headline',Arial,sans-serif;font-weight:900;font-size:2.5rem;line-height:1;color:#FF1A1A;">26,000+</div>
+            <div style="font-family:'Yango Headline',Arial,sans-serif;font-weight:900;font-size:2.5rem;line-height:1;color:#FF1A1A;">32,000+</div>
             <div class="label" style="color:#7A7A7A;margin-top:.4rem;">Engineers &amp; AI specialists</div>
           </div>
         </div>
@@ -282,7 +278,7 @@
           </div>
           <div>
             <p style="font-family:'Yango Group Text',Arial,sans-serif;font-weight:600;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:#141414;margin-bottom:.35rem;">e-Government &amp; Smart City</p>
-            <p style="font-size:.8rem;line-height:1.55;color:#555;letter-spacing:.03em;">AI-powered citizen services, G2C portals, transport management, and public infrastructure digitisation.</p>
+            <p style="font-size:.8rem;line-height:1.55;color:#555;letter-spacing:.03em;">AI-powered citizen services, G2C portals, transport management, and public infrastructure digitisation. Interactive app mockups built to world-class front-end and UX standards.</p>
           </div>
         </div>
         <div style="background:#F5F5F5;border-radius:1.875rem;padding:1.6rem 2rem;display:flex;gap:1.25rem;align-items:flex-start;">
@@ -291,7 +287,7 @@
           </div>
           <div>
             <p style="font-family:'Yango Group Text',Arial,sans-serif;font-weight:600;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:#141414;margin-bottom:.35rem;">FinTech &amp; Banking AI</p>
-            <p style="font-size:.8rem;line-height:1.55;color:#555;letter-spacing:.03em;">Credit scoring, fraud detection, AI call-center automation, executive intelligence, and KYC/AML tooling.</p>
+            <p style="font-size:.8rem;line-height:1.55;color:#555;letter-spacing:.03em;">Credit scoring, fraud detection, AI call-center automation, executive intelligence, and KYC/AML tooling. Interactive app mockups built to world-class front-end and UX standards.</p>
           </div>
         </div>
         <div style="background:#F5F5F5;border-radius:1.875rem;padding:1.6rem 2rem;display:flex;gap:1.25rem;align-items:flex-start;">
@@ -300,7 +296,7 @@
           </div>
           <div>
             <p style="font-family:'Yango Group Text',Arial,sans-serif;font-weight:600;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:#141414;margin-bottom:.35rem;">Mobility-as-a-Service</p>
-            <p style="font-size:.8rem;line-height:1.55;color:#555;letter-spacing:.03em;">End-to-end public transport management, route optimisation, fare analytics, and smart city mobility platforms.</p>
+            <p style="font-size:.8rem;line-height:1.55;color:#555;letter-spacing:.03em;">End-to-end public transport management, route optimisation, fare analytics, and smart city mobility platforms. Interactive app mockups built to world-class front-end and UX standards.</p>
           </div>
         </div>
         <div style="background:#F5F5F5;border-radius:1.875rem;padding:1.6rem 2rem;display:flex;gap:1.25rem;align-items:flex-start;">
@@ -309,7 +305,16 @@
           </div>
           <div>
             <p style="font-family:'Yango Group Text',Arial,sans-serif;font-weight:600;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:#141414;margin-bottom:.35rem;">MedTech &amp; Healthcare AI</p>
-            <p style="font-size:.8rem;line-height:1.55;color:#555;letter-spacing:.03em;">Clinical AI, appointment transcription, EHR platforms, diagnostic support, and healthcare portal digitisation.</p>
+            <p style="font-size:.8rem;line-height:1.55;color:#555;letter-spacing:.03em;">Clinical AI, appointment transcription, EHR platforms, diagnostic support, and healthcare portal digitisation. Interactive app mockups built to world-class front-end and UX standards.</p>
+          </div>
+        </div>
+        <div style="background:#F5F5F5;border-radius:1.875rem;padding:1.6rem 2rem;display:flex;gap:1.25rem;align-items:flex-start;">
+          <div style="width:2.75rem;height:2.75rem;border-radius:50%;background:#0A5C8A;flex-shrink:0;display:flex;align-items:center;justify-content:center;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M7 21h10M12 17v4"/><path d="M7 8h2m2 0h6M7 11h4"/></svg>
+          </div>
+          <div>
+            <p style="font-family:'Yango Group Text',Arial,sans-serif;font-weight:600;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:#141414;margin-bottom:.35rem;">Interactive Apps &amp; UX Prototypes</p>
+            <p style="font-size:.8rem;line-height:1.55;color:#555;letter-spacing:.03em;">Interactive app mock-ups and client-facing demos built with world-class front-end and UX practices — turning concepts into tangible, clickable experiences.</p>
           </div>
         </div>
       </div>
@@ -482,6 +487,7 @@
   <div class="container">
     <div class="cases-grid" id="cases-grid">
 
+      <div id="egov" style="position:relative;top:-80px;visibility:hidden;"></div>
       <!-- ── e-Gov ─────────────────────────────────────────────────── -->
 
       <div class="case-card fade-in" data-stream="e-Gov" style="transition-delay:.05s">
@@ -662,6 +668,7 @@
         </div>
       </div>
 
+      <div id="fintech" style="position:relative;top:-80px;visibility:hidden;"></div>
             <!-- ── FinTech / Banking ────────────────────────────────────── -->
 
       <div class="case-card fade-in" data-stream="FinTech / Banking" style="transition-delay:.05s">
@@ -928,6 +935,7 @@
         </div>
       </div>
 
+      <div id="maas" style="position:relative;top:-80px;visibility:hidden;"></div>
       <!-- ── MaaS ────────────────────────────────────────────────── -->
 
       <div class="case-card fade-in" data-stream="MaaS" style="transition-delay:.05s">
@@ -1049,6 +1057,7 @@
         </div>
       </div>
 
+      <div id="medtech" style="position:relative;top:-80px;visibility:hidden;"></div>
             <!-- ── MedTech ─────────────────────────────────────────────── -->
 
       <div class="case-card fade-in" data-stream="MedTech" style="transition-delay:.05s">
@@ -1268,7 +1277,7 @@
           <p class="footer__col-title">Contact</p>
           <ul class="footer__links">
             <li><a href="https://tech.yango.com" target="_blank">tech.yango.com</a></li>
-            <li><a href="/cdn-cgi/l/email-protection#7301121e0a12330a121d141c5d101c1e"><span class="__cf_email__" data-cfemail="7d0f1c10041c3d041c131a12531e1210">[email&#160;protected]</span></a></li>
+            <li><a href="mailto:ramya@yango.com">ramya@yango.com</a></li>
           </ul>
         </div>
       </div>
@@ -1279,7 +1288,7 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   // ── NAV scroll behaviour ──────────────────────────────────────────────
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
@@ -1454,4 +1463,11 @@
       'Phone:         ' + (phone || 'Not provided') + '\n' +
       'Interested in: ' + stream + '\n'
     );
-    window.location.h
+    window.location.href = 'mailto:ramya@yango.com?subject=' + subject + '&body=' + body;
+    document.getElementById('expert-form').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
